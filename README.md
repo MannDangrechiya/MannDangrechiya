@@ -11,7 +11,8 @@
   <br/><br/>
 
   <!-- Quick Social Navigation Badges -->
-    <img src="https://img.shields.io/badge/Live%20Portfolio-devportfolio.manndangrechiya.workers.dev-6366F1?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Live Portfolio Website" />
+  <a href="https://devportfolio.manndangrechiya.workers.dev/">
+    <img src="https://img.shields.io/badge/Portfolio-6366F1?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Portfolio" />
   </a>
   &nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/mann-dangrechiya-b00276254/">
@@ -416,7 +417,7 @@
     </a>
     &nbsp;&nbsp;
     <a href="https://devportfolio.manndangrechiya.workers.dev/">
-      <img src="https://img.shields.io/badge/Live%20Portfolio-devportfolio.manndangrechiya.workers.dev-6366F1?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Live Portfolio" />
+      <img src="https://img.shields.io/badge/Portfolio-6366F1?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Portfolio" />
     </a>
   </p>
 
