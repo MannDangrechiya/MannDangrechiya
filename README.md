@@ -11,12 +11,12 @@
   <br/><br/>
 
   <!-- Quick Social Navigation Badges -->
-  <a href="https://linkedin.com/in/manndangrechiya">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <a href="https://devportfolio.manndangrechiya.workers.dev/">
+    <img src="https://img.shields.io/badge/Live%20Portfolio-devportfolio.manndangrechiya.workers.dev-6366F1?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Live Portfolio Website" />
   </a>
   &nbsp;&nbsp;
-  <a href="https://x.com/manndangrechiya">
-    <img src="https://img.shields.io/badge/X%2F%20Twitter-000000?style=for-the-badge&logo=x&logoColor=white" alt="X / Twitter" />
+  <a href="https://www.linkedin.com/in/mann-dangrechiya-b00276254/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   &nbsp;&nbsp;
   <a href="mailto:manndangrechiya@gmail.com">
@@ -24,7 +24,7 @@
   </a>
   &nbsp;&nbsp;
   <a href="https://github.com/MannDangrechiya">
-    <img src="https://img.shields.io/badge/Portfolio-1E293B?style=for-the-badge&logo=flutter&logoColor=38BDF8" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
 
 </div>
@@ -45,21 +45,21 @@
 <table>
   <tr>
     <td width="60%" valign="top">
-      <h3>🚀 Senior Mobile Experience Engineer</h3>
+      <h3>🚀 Flutter Developer &amp; Mobile App Engineer</h3>
       <p>
-        Welcome! I am <strong>Mann Dangrechiya</strong>, a dedicated Mobile Experience Engineer based in 
+        Welcome! I am <strong>Mann Dangrechiya</strong>, a passionate Flutter Developer based in 
         <strong>Ahmedabad, Gujarat, India 🇮🇳</strong>.
       </p>
       <p>
-        I specialize in engineering high-performance, cross-platform applications using 
-        <a href="https://flutter.dev"><strong>Flutter</strong></a> and <a href="https://dart.dev"><strong>Dart</strong></a>. 
-        My design and engineering philosophy is inspired by the extreme visual polish and developer experience of 
-        <em>Linear</em>, <em>Vercel</em>, <em>Apple</em>, and <em>Raycast</em>.
+        Currently working as a <strong>Flutter Developer at PrintDeed</strong> (Gandhinagar, Gujarat), building production-grade cross-platform applications for iOS &amp; Android. I hold a Bachelor's degree in <strong>Computer Engineering</strong> from LDRP Institute of Technology and Research (CGPA 7.76/10).
+      </p>
+      <p>
+        Skilled in designing responsive UI, managing complex application state (<em>Riverpod</em>, <em>Provider</em>, <em>GetX</em>), integrating Firebase services &amp; REST APIs, and creating interactive 2D/3D graphics with Flame Engine and Rive 3D.
       </p>
       <br/>
-      <h4>🎯 Primary Objective</h4>
+      <h4>🎯 Current Career Goal</h4>
       <p>
-        <strong>Become one of the world's best Flutter Engineers and Open Source contributors</strong> — pushing the boundary of mobile UI performance, 60 FPS animations, custom GLSL shaders, clean architecture, and reactive state management.
+        <strong>Become one of the best Flutter Engineers and Open Source contributors</strong> — crafting high-performance, 60 FPS mobile experiences while driving open-source community innovation.
       </p>
     </td>
     <td width="40%" valign="top" align="center">
@@ -87,64 +87,64 @@
       <td align="center" width="16%">
         <img src="assets/icons/flutter.svg" width="48" height="48" alt="Flutter" /><br/>
         <strong>Flutter</strong><br/>
-        <font size="2" color="#94A3B8">Cross-Platform</font>
+        <font size="2" color="#94A3B8">Cross-Platform (95%)</font>
       </td>
       <td align="center" width="16%">
         <img src="assets/icons/dart.svg" width="48" height="48" alt="Dart" /><br/>
         <strong>Dart</strong><br/>
-        <font size="2" color="#94A3B8">OOP &amp; Functional</font>
+        <font size="2" color="#94A3B8">Async &amp; OOP (95%)</font>
+      </td>
+      <td align="center" width="16%">
+        <img src="assets/icons/riverpod.svg" width="48" height="48" alt="Riverpod & State" /><br/>
+        <strong>Riverpod / Provider / GetX</strong><br/>
+        <font size="2" color="#94A3B8">State Flow (92%)</font>
       </td>
       <td align="center" width="16%">
         <img src="assets/icons/firebase.svg" width="48" height="48" alt="Firebase" /><br/>
-        <strong>Firebase</strong><br/>
-        <font size="2" color="#94A3B8">Cloud &amp; Auth</font>
-      </td>
-      <td align="center" width="16%">
-        <img src="assets/icons/bloc.svg" width="48" height="48" alt="BLoC" /><br/>
-        <strong>BLoC / Cubit</strong><br/>
-        <font size="2" color="#94A3B8">State Flow</font>
-      </td>
-      <td align="center" width="16%">
-        <img src="assets/icons/riverpod.svg" width="48" height="48" alt="Riverpod" /><br/>
-        <strong>Riverpod</strong><br/>
-        <font size="2" color="#94A3B8">Reactive State</font>
+        <strong>Firebase Services</strong><br/>
+        <font size="2" color="#94A3B8">Auth &amp; Cloud (90%)</font>
       </td>
       <td align="center" width="16%">
         <img src="assets/icons/rest.svg" width="48" height="48" alt="REST APIs" /><br/>
-        <strong>REST APIs</strong><br/>
-        <font size="2" color="#94A3B8">Dio &amp; Http</font>
+        <strong>Firestore &amp; REST APIs</strong><br/>
+        <font size="2" color="#94A3B8">Realtime Sync (88%)</font>
+      </td>
+      <td align="center" width="16%">
+        <img src="assets/icons/flutter.svg" width="48" height="48" alt="Flame Engine" /><br/>
+        <strong>Flame Engine &amp; Rive 3D</strong><br/>
+        <font size="2" color="#94A3B8">Games &amp; Shaders (88%)</font>
       </td>
     </tr>
     <tr>
       <td align="center" width="16%">
         <img src="assets/icons/android.svg" width="48" height="48" alt="Android" /><br/>
-        <strong>Android</strong><br/>
-        <font size="2" color="#94A3B8">Kotlin / Gradle</font>
+        <strong>Android Native</strong><br/>
+        <font size="2" color="#94A3B8">Gradle &amp; Kotlin</font>
       </td>
       <td align="center" width="16%">
         <img src="assets/icons/ios.svg" width="48" height="48" alt="iOS" /><br/>
-        <strong>iOS</strong><br/>
-        <font size="2" color="#94A3B8">Swift / Xcode</font>
+        <strong>iOS Native</strong><br/>
+        <font size="2" color="#94A3B8">Swift &amp; Xcode</font>
       </td>
       <td align="center" width="16%">
         <img src="assets/icons/git.svg" width="48" height="48" alt="Git" /><br/>
         <strong>Git &amp; GitHub</strong><br/>
-        <font size="2" color="#94A3B8">Version Control</font>
+        <font size="2" color="#94A3B8">Version Control (90%)</font>
       </td>
       <td align="center" width="16%">
         <img src="assets/icons/figma.svg" width="48" height="48" alt="Figma" /><br/>
-        <strong>Figma</strong><br/>
+        <strong>Figma to Code</strong><br/>
         <font size="2" color="#94A3B8">UI/UX Design</font>
       </td>
       <td align="center" width="16%">
-        <img src="assets/icons/docker.svg" width="48" height="48" alt="Docker" /><br/>
-        <strong>Docker</strong><br/>
-        <font size="2" color="#94A3B8">Containerization</font>
+        <img src="assets/icons/docker.svg" width="48" height="48" alt="Firebase Hosting" /><br/>
+        <strong>Firebase Hosting</strong><br/>
+        <font size="2" color="#94A3B8">Web Deployment</font>
       </td>
       <td align="center" width="16%">
         <img src="assets/icons/vscode.svg" width="48" height="48" alt="VS Code" /><br/>
-        <strong>VS Code</strong><br/>
-        <font size="2" color="#94A3B8">IDE Tooling</font>
+        <strong>IDE &amp; DevTools</strong><br/>
+        <font size="2" color="#94A3B8">App Profiling (90%)</font>
       </td>
     </tr>
   </table>
@@ -181,41 +181,53 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>📱 Echo Music Desktop</h3>
+      <h3>💇 Salon Booking App</h3>
       <p>
-        A sleek, high-performance Flutter desktop music experience with smooth audio visualizers, reactive state management, offline caching, and cross-platform native audio controls.
+        Mobile application for booking salon services with real-time slot availability. Implemented user authentication, appointment scheduling, and booking management using Firebase with responsive UI navigation.
       </p>
       <p>
-        <code>Flutter</code> • <code>Dart</code> • <code>BLoC</code> • <code>Audio Service</code>
+        <code>Flutter</code> • <code>Firebase</code> • <code>REST APIs</code> • <code>GetX</code>
+      </p>
+      <p>
+        <a href="https://github.com/MannDangrechiya"><strong>View Project on GitHub &rarr;</strong></a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>📊 AI Resume Customiser App</h3>
+      <h3>🍎 Fruit POS System</h3>
       <p>
-        An intelligent mobile application featuring automated CV analysis, tailored keyword extraction, instant PDF generation, and custom Flutter micro-animations.
+        Point of Sale (POS) application for fruit vendors to manage sales, billing, and inventory efficiently. Integrated Firebase real-time data storage, transaction logs, and order summary generation.
       </p>
       <p>
-        <code>Flutter</code> • <code>Firebase</code> • <code>REST API</code> • <code>Riverpod</code>
+        <code>Flutter</code> • <code>Firebase</code> • <code>State Management</code>
+      </p>
+      <p>
+        <a href="https://github.com/MannDangrechiya"><strong>View Project on GitHub &rarr;</strong></a>
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>🩸 DBlood - Healthcare Network</h3>
+      <h3>🧮 Universal Calculator</h3>
       <p>
-        A real-time emergency blood donation network app connecting donors with local hospitals using geolocation, push notifications, and Firestore live data sync.
+        Multi-functional calculator application featuring basic arithmetic, scientific operations, real-time result calculations, and responsive dark mobile UI styling.
       </p>
       <p>
-        <code>Flutter</code> • <code>Firebase Firestore</code> • <code>Geolocator</code>
+        <code>Flutter</code> • <code>Dart</code> • <code>Mobile UI</code>
+      </p>
+      <p>
+        <a href="https://github.com/MannDangrechiya"><strong>View Project on GitHub &rarr;</strong></a>
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>🛒 Multi-Merchant POS System</h3>
+      <h3>🎮 3D Cyber Runner (Flutter Flame)</h3>
       <p>
-        Enterprise-grade point-of-sale solution engineered with clean architecture, offline-first SQLite sync, thermal receipt printing, and real-time inventory metrics.
+        Cross-platform 3D endless runner game built in Flutter with Flame Engine, Rive 3D animations, custom GLSL shaders, collision physics, and real-time high-score leaderboards on Firebase.
       </p>
       <p>
-        <code>Flutter</code> • <code>Clean Arch</code> • <code>SQLite / Isar</code>
+        <code>Flutter</code> • <code>Flame Engine</code> • <code>Rive 3D</code> • <code>GLSL Shaders</code>
+      </p>
+      <p>
+        <a href="https://github.com/MannDangrechiya"><strong>View Project on GitHub &rarr;</strong></a>
       </p>
     </td>
   </tr>
@@ -230,9 +242,38 @@
 <!-- ========================================== -->
 <div align="center">
   <img src="assets/svg/sections/experience-header.svg" alt="05. Experience Section Header" width="100%" />
-  
-  <br/><br/>
-  
+</div>
+
+<br/>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>💼 Flutter Developer</h4>
+      <p><strong>PrintDeed</strong> · Gandhinagar, Gujarat</p>
+      <p><em>Jul 2026 – Present</em></p>
+      <ul>
+        <li>Developing and maintaining production cross-platform mobile applications in Flutter.</li>
+        <li>Converting Figma UI/UX designs into responsive 60 FPS widget structures.</li>
+        <li>Integrating REST APIs, managing backend service communication, and debugging performance bottlenecks.</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <h4>💼 Flutter Developer Intern</h4>
+      <p><strong>TechyPanther</strong> · Ahmedabad, Gujarat</p>
+      <p><em>Sep 2025 – Feb 2026</em></p>
+      <ul>
+        <li>Developed cross-platform mobile apps using Flutter and Dart with responsive UI architecture.</li>
+        <li>Implemented state management (Provider / GetX) for efficient data flow and clean separation.</li>
+        <li>Integrated Firebase Authentication, Firestore, and Storage services.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<br/>
+
+<div align="center">
   <img src="assets/svg/experience-timeline.svg" alt="Engineering Milestones & Timeline" width="100%" />
 </div>
 
@@ -241,10 +282,43 @@
 <br/>
 
 <!-- ========================================== -->
-<!-- 06. GITHUB ANALYTICS & ACTIVITY -->
+<!-- 06. EDUCATION & CERTIFICATIONS -->
 <!-- ========================================== -->
 <div align="center">
-  <img src="assets/svg/sections/analytics-header.svg" alt="06. GitHub Analytics Header" width="100%" />
+  <img src="assets/svg/sections/roadmap-header.svg" alt="Education & Certifications" width="100%" />
+</div>
+
+<br/>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🎓 Education</h3>
+      <p><strong>B.E. in Computer Engineering</strong></p>
+      <p>LDRP Institute of Technology and Research, KSV University</p>
+      <p><em>Gandhinagar, Gujarat (2022 – 2026)</em></p>
+      <p><strong>CGPA:</strong> 7.76 / 10</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📜 Certifications</h3>
+      <ul>
+        <li><strong>Flutter &amp; Dart Development</strong> — <em>Udemy</em></li>
+        <li><strong>Python for Data Science</strong> — <em>NPTEL</em></li>
+        <li><strong>Enhancing Soft Skills &amp; Personality</strong> — <em>NPTEL</em></li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<br/>
+<hr />
+<br/>
+
+<!-- ========================================== -->
+<!-- 07. GITHUB ANALYTICS & ACTIVITY -->
+<!-- ========================================== -->
+<div align="center">
+  <img src="assets/svg/sections/analytics-header.svg" alt="07. GitHub Analytics Header" width="100%" />
   
   <br/><br/>
 
@@ -276,13 +350,9 @@
 <br/>
 
 <!-- ========================================== -->
-<!-- 07. ACHIEVEMENTS & ROADMAP -->
+<!-- 08. ACHIEVEMENTS & ROADMAP -->
 <!-- ========================================== -->
 <div align="center">
-  <img src="assets/svg/sections/roadmap-header.svg" alt="07. Roadmap Header" width="100%" />
-  
-  <br/><br/>
-
   <!-- Achievements SVG Card -->
   <img src="assets/svg/achievements-card.svg" alt="Engineering Highlights" width="100%" />
 
@@ -297,14 +367,13 @@
 <br/>
 
 <!-- ========================================== -->
-<!-- 08. SPOTIFY & VISITOR STATS -->
+<!-- 09. SPOTIFY & VISITOR STATS -->
 <!-- ========================================== -->
 <div align="center">
   <table>
     <tr>
       <td width="60%" align="center" valign="middle">
         <h4>🎧 Coding Soundtrack &amp; Focus Flow</h4>
-        <!-- Spotify Now Playing Card Embed -->
         <a href="https://spotify.com">
           <img src="https://spotify-github-readme.vercel.app/api/spotify?user=manndangrechiya&theme=dark" alt="Spotify Live Track Feed" width="95%" />
         </a>
@@ -323,7 +392,7 @@
 <br/>
 
 <!-- ========================================== -->
-<!-- 09. CONTACT & FOOTER -->
+<!-- 10. CONTACT & FOOTER -->
 <!-- ========================================== -->
 <div align="center">
   <img src="assets/svg/sections/contact-header.svg" alt="08. Contact Header" width="100%" />
@@ -331,16 +400,24 @@
   <br/><br/>
 
   <p>
-    Interested in collaborating on high-impact <strong>Flutter</strong> mobile apps, open-source projects, or architecture design?
+    Open for high-impact <strong>Flutter</strong> mobile app development, cross-platform architecture, or open-source collaborations.
   </p>
 
   <p>
     <a href="mailto:manndangrechiya@gmail.com">
-      <img src="https://img.shields.io/badge/Send%20Direct%20Email-manndangrechiya%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Send Email" />
+      <img src="https://img.shields.io/badge/Email-manndangrechiya%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Send Email" />
     </a>
     &nbsp;&nbsp;
-    <a href="https://linkedin.com/in/manndangrechiya">
-      <img src="https://img.shields.io/badge/Connect%20on%20LinkedIn-Mann%20Dangrechiya-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <a href="tel:+918866945433">
+      <img src="https://img.shields.io/badge/Phone-%2B91%208866945433-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Phone" />
+    </a>
+    &nbsp;&nbsp;
+    <a href="https://www.linkedin.com/in/mann-dangrechiya-b00276254/">
+      <img src="https://img.shields.io/badge/LinkedIn-Mann%20Dangrechiya-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    </a>
+    &nbsp;&nbsp;
+    <a href="https://devportfolio.manndangrechiya.workers.dev/">
+      <img src="https://img.shields.io/badge/Live%20Portfolio-devportfolio.manndangrechiya.workers.dev-6366F1?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Live Portfolio" />
     </a>
   </p>
 

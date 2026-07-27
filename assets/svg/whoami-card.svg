@@ -30,18 +30,17 @@
   <g filter="url(#shadow)">
     <rect width="850" height="380" rx="14" fill="url(#card-bg)" stroke="url(#card-stroke)" stroke-width="1.2" />
 
-    <!-- Window Top Header Bar -->
+    <!-- Window Header -->
     <path d="M 0 14 C 0 6, 6 0, 14 0 L 836 0 C 844 0, 850 6, 850 14 L 850 42 L 0 42 Z" fill="#111827" stroke="#1E293B" stroke-width="0.8" />
     <circle cx="24" cy="21" r="5.5" fill="#EF4444" />
     <circle cx="42" cy="21" r="5.5" fill="#F59E0B" />
     <circle cx="60" cy="21" r="5.5" fill="#10B981" />
     <text x="85" y="25" class="mono" font-size="12" fill="#94A3B8">lib/src/whoami.dart</text>
-    <text x="750" y="25" class="mono" font-size="11" fill="#475569">UTF-8 | Dart 3.4</text>
+    <text x="730" y="25" class="mono" font-size="11" fill="#475569">B.E. Comp Eng | 7.76 CGPA</text>
     <line x1="0" y1="42" x2="850" y2="42" stroke="#1E293B" stroke-width="1" />
 
-    <!-- Code Line Numbers & Content -->
+    <!-- Code Line Content -->
     <g transform="translate(20, 70)">
-      <!-- Line Numbers -->
       <g class="mono ln">
         <text x="0" y="0">01</text>
         <text x="0" y="24">02</text>
@@ -58,69 +57,55 @@
         <text x="0" y="288">13</text>
       </g>
 
-      <!-- Code Content -->
       <g transform="translate(35, 0)" class="mono">
-        <!-- Line 1 -->
         <text x="0" y="0">
           <tspan class="kw">import</tspan> <tspan class="str">'package:flutter/material.dart'</tspan><tspan class="punct">;</tspan>
         </text>
 
-        <!-- Line 2 -->
         <text x="0" y="24">
-          <tspan class="cmt">// Senior Mobile Experience &amp; UI Specialist</tspan>
+          <tspan class="cmt">// Flutter Developer @ PrintDeed | Ex-TechyPanther</tspan>
         </text>
 
-        <!-- Line 3 -->
         <text x="0" y="48">
-          <tspan class="kw">class</tspan> <tspan class="cls">MannDangrechiya</tspan> <tspan class="kw">extends</tspan> <tspan class="cls">DeveloperProfile</tspan> <tspan class="punct">{</tspan>
+          <tspan class="kw">class</tspan> <tspan class="cls">MannDangrechiya</tspan> <tspan class="kw">extends</tspan> <tspan class="cls">FlutterDeveloper</tspan> <tspan class="punct">{</tspan>
         </text>
 
-        <!-- Line 4 -->
         <text x="20" y="72">
           <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">name</tspan> = <tspan class="str">'Mann Dangrechiya'</tspan><tspan class="punct">;</tspan>
         </text>
 
-        <!-- Line 5 -->
         <text x="20" y="96">
-          <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">role</tspan> = <tspan class="str">'Mobile Experience Engineer'</tspan><tspan class="punct">;</tspan>
+          <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">company</tspan> = <tspan class="str">'PrintDeed (Gandhinagar)'</tspan><tspan class="punct">;</tspan>
         </text>
 
-        <!-- Line 6 -->
         <text x="20" y="120">
           <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">location</tspan> = <tspan class="str">'Ahmedabad, Gujarat, India 🇮🇳'</tspan><tspan class="punct">;</tspan>
         </text>
 
-        <!-- Line 7 -->
         <text x="20" y="144">
-          <tspan class="kw">final</tspan> <tspan class="cls">List</tspan><tspan class="punct">&lt;</tspan><tspan class="cls">String</tspan><tspan class="punct">&gt;</tspan> <tspan class="prop">coreStack</tspan> = <tspan class="punct">[</tspan><tspan class="str">'Flutter'</tspan><tspan class="punct">, </tspan><tspan class="str">'Dart'</tspan><tspan class="punct">, </tspan><tspan class="str">'Firebase'</tspan><tspan class="punct">];</tspan>
+          <tspan class="kw">final</tspan> <tspan class="cls">List</tspan><tspan class="punct">&lt;</tspan><tspan class="cls">String</tspan><tspan class="punct">&gt;</tspan> <tspan class="prop">stack</tspan> = <tspan class="punct">[</tspan><tspan class="str">'Flutter'</tspan><tspan class="punct">, </tspan><tspan class="str">'Dart'</tspan><tspan class="punct">, </tspan><tspan class="str">'Firebase'</tspan><tspan class="punct">, </tspan><tspan class="str">'REST APIs'</tspan><tspan class="punct">];</tspan>
         </text>
 
-        <!-- Line 8 -->
         <text x="20" y="168">
-          <tspan class="kw">final</tspan> <tspan class="cls">List</tspan><tspan class="punct">&lt;</tspan><tspan class="cls">String</tspan><tspan class="punct">&gt;</tspan> <tspan class="prop">mastery</tspan> = <tspan class="punct">[</tspan><tspan class="str">'State Management'</tspan><tspan class="punct">, </tspan><tspan class="str">'60FPS Animations'</tspan><tspan class="punct">, </tspan><tspan class="str">'Clean Arch'</tspan><tspan class="punct">];</tspan>
+          <tspan class="kw">final</tspan> <tspan class="cls">List</tspan><tspan class="punct">&lt;</tspan><tspan class="cls">String</tspan><tspan class="punct">&gt;</tspan> <tspan class="prop">stateMgmt</tspan> = <tspan class="punct">[</tspan><tspan class="str">'Riverpod'</tspan><tspan class="punct">, </tspan><tspan class="str">'Provider'</tspan><tspan class="punct">, </tspan><tspan class="str">'GetX'</tspan><tspan class="punct">];</tspan>
         </text>
 
-        <!-- Line 9 -->
         <text x="20" y="192">
-          <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">currentMission</tspan> = <tspan class="str">'Becoming a top-tier Flutter &amp; OSS Engineer'</tspan><tspan class="punct">;</tspan>
+          <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">education</tspan> = <tspan class="str">'B.E. Computer Engineering (LDRP-ITR)'</tspan><tspan class="punct">;</tspan>
         </text>
 
-        <!-- Line 10 -->
         <text x="20" y="216">
-          <tspan class="kw">final</tspan> <tspan class="cls">bool</tspan> <tspan class="prop">isOpenToConnect</tspan> = <tspan class="kw">true</tspan><tspan class="punct">;</tspan>
+          <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">portfolio</tspan> = <tspan class="str">'devportfolio.manndangrechiya.workers.dev'</tspan><tspan class="punct">;</tspan>
         </text>
 
-        <!-- Line 11 -->
         <text x="20" y="240">
           <tspan class="cmt">@override</tspan>
         </text>
 
-        <!-- Line 12 -->
         <text x="20" y="264">
-          <tspan class="cls">Widget</tspan> <tspan class="prop">build</tspan><tspan class="punct">(</tspan><tspan class="cls">BuildContext</tspan> <tspan class="prop">context</tspan><tspan class="punct">) =&gt; </tspan><tspan class="cls">PixelPerfectMobileExperience</tspan><tspan class="punct">();</tspan>
+          <tspan class="cls">Widget</tspan> <tspan class="prop">build</tspan><tspan class="punct">(</tspan><tspan class="cls">BuildContext</tspan> <tspan class="prop">context</tspan><tspan class="punct">) =&gt; </tspan><tspan class="cls">ProductionReadyApp</tspan><tspan class="punct">();</tspan>
         </text>
 
-        <!-- Line 13 -->
         <text x="0" y="288">
           <tspan class="punct">}</tspan>
         </text>
