@@ -11,7 +11,6 @@
   <br/><br/>
 
   <!-- Quick Social Navigation Badges -->
-  <a href="https://devportfolio.manndangrechiya.workers.dev/">
     <img src="https://img.shields.io/badge/Live%20Portfolio-devportfolio.manndangrechiya.workers.dev-6366F1?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Live Portfolio Website" />
   </a>
   &nbsp;&nbsp;
