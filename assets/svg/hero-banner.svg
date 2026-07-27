@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <!-- Dark obsidian background gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090E" />
+      <stop offset="50%" stop-color="#0D111A" />
+      <stop offset="100%" stop-color="#05070B" />
+    </linearGradient>
+
+    <!-- Glassmorphic card fill gradient -->
+    <linearGradient id="glass-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.01" />
+    </linearGradient>
+
+    <!-- Glass border gradient -->
+    <linearGradient id="glass-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Text name gradient -->
+    <linearGradient id="name-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#E2E8F0" />
+      <stop offset="75%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+
+    <!-- Subtitle gradient -->
+    <linearGradient id="sub-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818CF8" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow-indigo" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="35" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-cyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="40" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="subtle-shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E293B" stroke-width="0.8" stroke-opacity="0.4" />
+      <circle cx="40" cy="40" r="1" fill="#6366F1" fill-opacity="0.3" />
+    </pattern>
+
+    <!-- Shimmer animated gradient -->
+    <linearGradient id="shimmer" x1="-100%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.7; transform: scale(1.05); }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes gridLine {
+      0% { stroke-dashoffset: 1000; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .orb-indigo { animation: pulse 8s ease-in-out infinite; transform-origin: 200px 100px; }
+    .orb-cyan { animation: pulse 10s ease-in-out infinite 2s; transform-origin: 1000px 280px; }
+    .floating-card { animation: float 6s ease-in-out infinite; }
+    .status-dot { animation: blink 2s ease-in-out infinite; }
+    .font-mono { font-family: 'Fira Code', 'JetBrains Mono', 'Menlo', 'Consolas', monospace; }
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Inter', sans-serif; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1200" height="380" rx="16" fill="url(#bg-grad)" stroke="#1E293B" stroke-width="1.5" />
+
+  <!-- Background Orbs -->
+  <circle cx="220" cy="90" r="160" fill="#4F46E5" fill-opacity="0.18" filter="url(#glow-indigo)" class="orb-indigo" />
+  <circle cx="980" cy="280" r="180" fill="#06B6D4" fill-opacity="0.15" filter="url(#glow-cyan)" class="orb-cyan" />
+  <circle cx="600" cy="190" r="120" fill="#a855f7" fill-opacity="0.08" filter="url(#glow-indigo)" />
+
+  <!-- Cybernetic Grid Overlay -->
+  <rect width="1200" height="380" rx="16" fill="url(#cyber-grid)" />
+
+  <!-- Top Decorative Lines -->
+  <line x1="0" y1="2" x2="1200" y2="2" stroke="url(#glass-border)" stroke-width="2" />
+  <line x1="80" y1="0" x2="80" y2="380" stroke="#1E293B" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4" />
+  <line x1="1120" y1="0" x2="1120" y2="380" stroke="#1E293B" stroke-width="0.5" stroke-dasharray="4 4" opacity="0.4" />
+
+  <!-- Main Glass Card Container -->
+  <g filter="url(#subtle-shadow)" class="floating-card">
+    <rect x="40" y="35" width="1120" height="310" rx="14" fill="url(#glass-grad)" stroke="url(#glass-border)" stroke-width="1.2" />
+
+    <!-- Top Window Controls (Linear/Mac OS Style) -->
+    <circle cx="70" cy="62" r="5" fill="#FF5F56" />
+    <circle cx="86" cy="62" r="5" fill="#FFBD2E" />
+    <circle cx="102" cy="62" r="5" fill="#27C93F" />
+    <text x="125" y="66" class="font-mono" font-size="11" fill="#64748B" letter-spacing="1">MANN_DANGRECHIYA // PROFILE_HERO.DARTR</text>
+    
+    <!-- Top Right Status Badge -->
+    <g transform="translate(860, 50)">
+      <rect x="0" y="0" width="260" height="26" rx="13" fill="#0F172A" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+      <circle cx="15" cy="13" r="4" fill="#10B981" class="status-dot" />
+      <circle cx="15" cy="13" r="7" fill="#10B981" fill-opacity="0.25" class="status-dot" />
+      <text x="28" y="17" class="font-mono" font-size="10.5" fill="#34D399" font-weight="600">OPEN TO HIGH-IMPACT ROLES</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="70" y="142" class="font-sans" font-size="46" font-weight="800" fill="url(#name-grad)" letter-spacing="-1">Mann Dangrechiya</text>
+    
+    <!-- Subtitle Role -->
+    <text x="70" y="178" class="font-mono" font-size="18" font-weight="600" fill="url(#sub-grad)" letter-spacing="2">MOBILE EXPERIENCE ENGINEER</text>
+
+    <!-- Bio / Specs Summary -->
+    <text x="70" y="215" class="font-sans" font-size="14" fill="#94A3B8" font-weight="400">
+      Crafting fluid, high-performance cross-platform applications &amp; motion graphics with <tspan fill="#38BDF8" font-weight="600">Flutter</tspan> &amp; <tspan fill="#818CF8" font-weight="600">Dart</tspan>.
+    </text>
+    <text x="70" y="238" class="font-sans" font-size="14" fill="#94A3B8" font-weight="400">
+      Obsessed with UI engineering, 60 FPS animations, clean architecture, and open-source excellence.
+    </text>
+
+    <!-- Bottom Tech Pills Bar -->
+    <g transform="translate(70, 275)">
+      <!-- Location Chip -->
+      <g transform="translate(0,0)">
+        <rect x="0" y="0" width="165" height="28" rx="6" fill="#1E293B" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+        <text x="12" y="18" class="font-sans" font-size="11.5" fill="#CBD5E1" font-weight="500">📍 Ahmedabad, India</text>
+      </g>
+
+      <!-- Flutter Chip -->
+      <g transform="translate(177,0)">
+        <rect x="0" y="0" width="95" height="28" rx="6" fill="#0284C7" fill-opacity="0.15" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="1" />
+        <text x="12" y="18" class="font-mono" font-size="11.5" fill="#38BDF8" font-weight="600">⚡ Flutter</text>
+      </g>
+
+      <!-- Dart Chip -->
+      <g transform="translate(284,0)">
+        <rect x="0" y="0" width="80" height="28" rx="6" fill="#4F46E5" fill-opacity="0.15" stroke="#818CF8" stroke-opacity="0.4" stroke-width="1" />
+        <text x="12" y="18" class="font-mono" font-size="11.5" fill="#818CF8" font-weight="600">🎯 Dart</text>
+      </g>
+
+      <!-- Firebase Chip -->
+      <g transform="translate(376,0)">
+        <rect x="0" y="0" width="105" height="28" rx="6" fill="#D97706" fill-opacity="0.15" stroke="#FBBF24" stroke-opacity="0.4" stroke-width="1" />
+        <text x="12" y="18" class="font-mono" font-size="11.5" fill="#FBBF24" font-weight="600">🔥 Firebase</text>
+      </g>
+
+      <!-- Architecture Chip -->
+      <g transform="translate(493,0)">
+        <rect x="0" y="0" width="150" height="28" rx="6" fill="#059669" fill-opacity="0.15" stroke="#34D399" stroke-opacity="0.4" stroke-width="1" />
+        <text x="12" y="18" class="font-mono" font-size="11.5" fill="#34D399" font-weight="600">📐 Clean Architecture</text>
+      </g>
+
+      <!-- Motion / UI Engineering Chip -->
+      <g transform="translate(655,0)">
+        <rect x="0" y="0" width="145" height="28" rx="6" fill="#9333EA" fill-opacity="0.15" stroke="#C084FC" stroke-opacity="0.4" stroke-width="1" />
+        <text x="12" y="18" class="font-mono" font-size="11.5" fill="#C084FC" font-weight="600">✨ Motion UI &amp; FX</text>
+      </g>
+    </g>
+  </g>
+</svg>

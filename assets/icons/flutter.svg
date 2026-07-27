@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="flut-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#54C5F8" />
+      <stop offset="100%" stop-color="#29B6F6" />
+    </linearGradient>
+    <linearGradient id="flut-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#01579B" />
+      <stop offset="100%" stop-color="#0288D1" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="#090D16" stroke="#1E293B" stroke-width="2" />
+  <g transform="translate(18, 18) scale(0.64)">
+    <path d="M 59.3 0 L 17.6 41.7 L 32.7 56.8 L 90.1 0 Z" fill="url(#flut-grad1)" />
+    <path d="M 32.7 56.8 L 17.6 71.9 L 59.3 113.6 L 90.1 113.6 L 47.8 71.9 Z" fill="url(#flut-grad1)" />
+    <path d="M 32.7 56.8 L 47.8 71.9 L 33.5 86.2 Z" fill="url(#flut-grad2)" opacity="0.8" />
+  </g>
+</svg>

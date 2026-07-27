@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fire-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFC107" />
+      <stop offset="100%" stop-color="#FFA000" />
+    </linearGradient>
+    <linearGradient id="fire-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7043" />
+      <stop offset="100%" stop-color="#F4511E" opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="#090D16" stroke="#1E293B" stroke-width="2" />
+  <g transform="translate(22, 18) scale(0.56)">
+    <path d="M 12.3 87.2 L 40.5 4.8 C 41.2 2.7 44.1 2.7 44.8 4.8 L 56.6 39.8 Z" fill="url(#fire-grad1)" />
+    <path d="M 5.2 73.1 L 34.6 18.2 C 35.4 16.7 37.6 17.1 37.9 18.8 L 47.5 73.8 Z" fill="url(#fire-grad2)" />
+    <path d="M 5.2 73.1 L 47.2 97.4 C 49.3 98.6 51.9 98.6 54.0 97.4 L 96.0 73.1 Z" fill="#FFA000" />
+  </g>
+</svg>

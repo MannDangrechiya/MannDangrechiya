@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <rect width="100" height="100" rx="20" fill="#090D16" stroke="#1E293B" stroke-width="2" />
+  <g transform="translate(22, 22) scale(0.56)">
+    <!-- Android Head -->
+    <path d="M 12 45 A 38 38 0 0 1 88 45 Z" fill="#3DDC84" />
+    <circle cx="32" cy="30" r="4" fill="#090D16" />
+    <circle cx="68" cy="30" r="4" fill="#090D16" />
+    <line x1="22" y1="12" x2="30" y2="24" stroke="#3DDC84" stroke-width="4" stroke-linecap="round" />
+    <line x1="78" y1="12" x2="70" y2="24" stroke="#3DDC84" stroke-width="4" stroke-linecap="round" />
+    <!-- Android Body -->
+    <rect x="12" y="50" width="76" height="40" rx="10" fill="#3DDC84" />
+  </g>
+</svg>

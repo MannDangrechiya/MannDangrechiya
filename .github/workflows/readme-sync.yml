@@ -1,0 +1,38 @@
+name: Profile Health & Asset Sync Check
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    name: Validate SVG Assets & Markdown Links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Validate SVG XML Integrity
+        run: |
+          echo "Checking SVG integrity..."
+          sudo apt-get update -y && sudo apt-get install -y libxml2-utils
+          for f in assets/svg/*.svg assets/svg/sections/*.svg assets/icons/*.svg; do
+            if [ -f "$f" ]; then
+              xmllint --noout "$f" || exit 1
+            fi
+          done
+          echo "All SVG graphics validated successfully!"
+
+      - name: Verify File References
+        run: |
+          echo "Verifying README asset links..."
+          grep -o 'assets/[^"]*' README.md | while read -r line; do
+            if [ ! -f "$line" ]; then
+              echo "Error: Referenced file $line does not exist!"
+              exit 1
+            fi
+          done
+          echo "All asset references verified!"

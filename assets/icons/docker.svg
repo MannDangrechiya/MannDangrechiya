@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <rect width="100" height="100" rx="20" fill="#090D16" stroke="#1E293B" stroke-width="2" />
+  <g transform="translate(18, 26) scale(0.64)">
+    <path d="M 96.6 34.3 C 93.3 32 87.7 32.7 84 34.7 C 82.8 28.5 78.4 23.3 72.8 21.6 L 71 21.1 L 69.8 22.6 C 67.2 26 65.5 30.2 64.9 34.6 C 60.1 33.7 51 34.5 45.4 39.5 L 3.8 39.5 C 1.6 39.5 -0.1 41.3 0 43.5 C 0.5 54 5.8 74.8 39 74.8 C 66.8 74.8 82.2 61.2 87.2 46.9 C 91.7 47 96.7 44.5 98.7 40 C 99.8 37.5 98.8 35.7 96.6 34.3 Z" fill="#2496ED" />
+    <rect x="22" y="24" width="12" height="11" rx="2" fill="#2496ED" />
+    <rect x="36" y="24" width="12" height="11" rx="2" fill="#2496ED" />
+    <rect x="50" y="24" width="12" height="11" rx="2" fill="#2496ED" />
+    <rect x="36" y="10" width="12" height="11" rx="2" fill="#2496ED" />
+    <rect x="50" y="10" width="12" height="11" rx="2" fill="#2496ED" />
+  </g>
+</svg>

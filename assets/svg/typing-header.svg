@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 60" width="100%" height="60">
+  <defs>
+    <linearGradient id="typing-text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+  </defs>
+  <style>
+    .typing-container {
+      font-family: 'Fira Code', 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
+      font-size: 20px;
+      font-weight: 600;
+      fill: url(#typing-text-grad);
+    }
+    .cursor {
+      font-family: monospace;
+      font-size: 22px;
+      fill: #38BDF8;
+      animation: blink 0.8s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+
+  <g transform="translate(10, 38)">
+    <text class="typing-container">
+      <tspan fill="#64748B">&gt; </tspan>
+      <tspan>
+        <animate attributeName="opacity" values="1;1;1;1" dur="16s" repeatCount="indefinite" />
+        <!-- SMIL animation for cycling text phrases -->
+        <animate attributeName="textContent" 
+          values="Mobile Experience Engineer;Flutter &amp; Dart Architect;UI Engineering &amp; Motion Specialist;Open Source Contributor;Mobile Experience Engineer" 
+          keyTimes="0; 0.25; 0.50; 0.75; 1"
+          dur="16s" 
+          repeatCount="indefinite" />
+      </tspan>
+      <tspan class="cursor">|</tspan>
+    </text>
+  </g>
+</svg>
