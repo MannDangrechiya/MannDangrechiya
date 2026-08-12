@@ -174,6 +174,11 @@
 <!-- ========================================== -->
 <div align="center">
   <img src="assets/svg/sections/projects-header.svg" alt="04. Featured Projects Header" width="100%" />
+
+  <br/><br/>
+
+  <!-- Interactive Device Mockup Carousel SVG -->
+  <img src="assets/svg/device-carousel.svg" alt="Flutter Interactive Mobile App Carousel" width="100%" />
 </div>
 
 <br/>

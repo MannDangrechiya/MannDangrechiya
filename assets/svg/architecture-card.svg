@@ -1,97 +1,277 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%">
   <defs>
+    <!-- Background Gradient -->
     <linearGradient id="arch-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B0F17" />
-      <stop offset="100%" stop-color="#030712" />
+      <stop offset="0%" stop-color="#060812" />
+      <stop offset="50%" stop-color="#0B0F1D" />
+      <stop offset="100%" stop-color="#05070F" />
     </linearGradient>
-    <linearGradient id="layer-ui" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.2" />
+
+    <!-- Layer Gradients -->
+    <linearGradient id="pres-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#312E81" stop-opacity="0.6" />
     </linearGradient>
-    <linearGradient id="layer-bloc" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0.2" />
+    <linearGradient id="domain-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#083344" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#164E63" stop-opacity="0.6" />
     </linearGradient>
-    <linearGradient id="layer-domain" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#C084FC" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#9333EA" stop-opacity="0.2" />
+    <linearGradient id="data-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E1065" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#4C1D95" stop-opacity="0.6" />
     </linearGradient>
-    <linearGradient id="layer-data" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#34D399" stop-opacity="0.2" />
-      <stop offset="100%" stop-color="#059669" stop-opacity="0.2" />
+
+    <!-- Sub-box gradients -->
+    <linearGradient id="pres-sub" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0.1" />
     </linearGradient>
-    <filter id="card-shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.5" />
+    <linearGradient id="domain-sub" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.1" />
+    </linearGradient>
+    <linearGradient id="data-sub" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Flow Arrow Marker -->
+    <marker id="arrow-indigo" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#818CF8" />
+    </marker>
+    <marker id="arrow-cyan" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#38BDF8" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#C084FC" />
+    </marker>
+
+    <!-- Glow Filters -->
+    <filter id="glow-pres" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#6366F1" flood-opacity="0.3" />
+    </filter>
+    <filter id="glow-domain" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#06B6D4" flood-opacity="0.3" />
+    </filter>
+    <filter id="glow-data" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#8B5CF6" flood-opacity="0.3" />
     </filter>
   </defs>
 
   <style>
-    .mono { font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace; }
-    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-    .arrow { stroke: #64748B; stroke-width: 1.5; stroke-dasharray: 4 3; fill: none; }
+    .layer-box {
+      transform-origin: center;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), stroke 0.3s ease, fill-opacity 0.3s ease;
+      cursor: pointer;
+    }
+    .layer-box:hover {
+      transform: translateY(-6px) scale(1.015);
+    }
+    .layer-pres:hover {
+      stroke: #818CF8 !important;
+      stroke-width: 2.2px !important;
+    }
+    .layer-domain:hover {
+      stroke: #38BDF8 !important;
+      stroke-width: 2.2px !important;
+    }
+    .layer-data:hover {
+      stroke: #C084FC !important;
+      stroke-width: 2.2px !important;
+    }
+    .sub-node {
+      transition: transform 0.3s ease, fill-opacity 0.3s ease, stroke-opacity 0.3s ease;
+    }
+    .layer-box:hover .sub-node {
+      transform: translateY(-2px);
+      fill-opacity: 0.35;
+      stroke-opacity: 0.9;
+    }
+    .sub-node:hover {
+      fill-opacity: 0.5 !important;
+      stroke-width: 1.5px !important;
+    }
+    .layer-title {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-weight: 700;
+    }
+    .node-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 11px;
+    }
   </style>
 
-  <g filter="url(#card-shadow)">
-    <!-- Main Background -->
-    <rect width="900" height="280" rx="14" fill="url(#arch-bg)" stroke="#1E293B" stroke-width="1.2" />
+  <!-- Background Base Canvas -->
+  <rect width="900" height="480" rx="14" fill="url(#arch-bg)" stroke="#1E293B" stroke-width="1.5" />
 
-    <text x="30" y="38" class="sans" font-size="16" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">FLUTTER CLEAN ARCHITECTURE &amp; MOTION ECOSYSTEM</text>
-    <text x="30" y="58" class="sans" font-size="12" fill="#64748B">Decoupled, scalable, testable, and reaction-driven state flow</text>
+  <!-- Header Banner -->
+  <g transform="translate(30, 22)">
+    <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="800" fill="#F8FAFC" letter-spacing="1">CLEAN ARCHITECTURE SYSTEM DESIGN</text>
+    <text x="0" y="38" font-family="-apple-system, sans-serif" font-size="11.5" fill="#94A3B8">Separation of Concerns: Presentation Layer → Domain Layer → Data Layer (Hover boxes to expand components)</text>
+  </g>
 
-    <!-- Layer 1: Presentation Layer -->
-    <g transform="translate(30, 85)">
-      <rect width="180" height="155" rx="10" fill="url(#layer-ui)" stroke="#38BDF8" stroke-width="1" />
-      <rect x="0" y="0" width="180" height="28" rx="10" fill="#38BDF8" fill-opacity="0.2" />
-      <text x="90" y="19" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#38BDF8">PRESENTATION LAYER</text>
-      <text x="20" y="52" class="mono" font-size="11" fill="#E2E8F0">• Widgets &amp; Pages</text>
-      <text x="20" y="77" class="mono" font-size="11" fill="#E2E8F0">• Custom Painters</text>
-      <text x="20" y="102" class="mono" font-size="11" fill="#E2E8F0">• Implicit/Explicit FX</text>
-      <text x="20" y="127" class="mono" font-size="11" fill="#E2E8F0">• Design Tokens</text>
+  <!-- Animated Flow Arrows Between Layers (Dotted Moving Lines) -->
+  <g id="flow-arrows">
+    <!-- Flow Arrow 1: Presentation to Domain -->
+    <path d="M 290 230 L 330 230" fill="none" stroke="#818CF8" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrow-indigo)">
+      <animate attributeName="stroke-dashoffset" from="24" to="0" dur="1.2s" repeatCount="indefinite" />
+    </path>
+    <text x="295" y="218" font-family="'JetBrains Mono', monospace" font-size="9" fill="#818CF8" font-weight="600">Uses</text>
+
+    <!-- Flow Arrow 2: Domain to Data -->
+    <path d="M 570 230 L 610 230" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="6 6" marker-end="url(#arrow-cyan)">
+      <animate attributeName="stroke-dashoffset" from="24" to="0" dur="1.2s" repeatCount="indefinite" />
+    </path>
+    <text x="572" y="218" font-family="'JetBrains Mono', monospace" font-size="9" fill="#38BDF8" font-weight="600">Implements</text>
+
+    <!-- Flow Arrow 3: Return Data to Presentation (Bottom Curved Flow) -->
+    <path d="M 740 405 C 740 440, 160 440, 160 405" fill="none" stroke="#C084FC" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrow-purple)">
+      <animate attributeName="stroke-dashoffset" from="0" to="24" dur="1.8s" repeatCount="indefinite" />
+    </path>
+    <text x="410" y="445" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#C084FC" font-weight="600">Data Stream &amp; State Flow</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 1. PRESENTATION LAYER (INDIGO THEME) -->
+  <!-- ========================================== -->
+  <g transform="translate(30, 75)" class="layer-box layer-pres">
+    <!-- Main Card Body -->
+    <rect x="0" y="0" width="260" height="330" rx="12" fill="url(#pres-grad)" stroke="#6366F1" stroke-width="1.5" filter="url(#glow-pres)" />
+    
+    <!-- Top Header Bar -->
+    <rect x="0" y="0" width="260" height="42" rx="12" fill="#4F46E5" fill-opacity="0.3" stroke="#6366F1" stroke-width="1" />
+    <circle cx="20" cy="21" r="5" fill="#818CF8" />
+    <text x="34" y="26" class="layer-title" font-size="13" fill="#E0E7FF">1. PRESENTATION</text>
+    <text x="235" y="25" font-family="sans-serif" font-size="10" fill="#818CF8">UI/UX</text>
+
+    <!-- Layer Description -->
+    <text x="16" y="62" font-family="-apple-system, sans-serif" font-size="10.5" fill="#C7D2FE">Widgets, State &amp; UI Logic</text>
+
+    <!-- Sub-components (Expandable Nodes) -->
+    <g transform="translate(14, 75)">
+      <!-- Node 1: UI Widgets & Views -->
+      <g transform="translate(0, 0)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#pres-sub)" stroke="#818CF8" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#E0E7FF">🎨 Flutter UI Widgets</text>
+        <text x="14" y="38" class="node-text" fill="#A5B4FC">Stateless/Stateful Views &amp; Screens</text>
+      </g>
+
+      <!-- Node 2: State Management (Riverpod/GetX) -->
+      <g transform="translate(0, 58)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#pres-sub)" stroke="#818CF8" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#E0E7FF">⚡ Riverpod / Provider</text>
+        <text x="14" y="38" class="node-text" fill="#A5B4FC">StateNotifier &amp; Controllers</text>
+      </g>
+
+      <!-- Node 3: View Models & State -->
+      <g transform="translate(0, 116)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#pres-sub)" stroke="#818CF8" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#E0E7FF">📊 ViewStates &amp; Models</text>
+        <text x="14" y="38" class="node-text" fill="#A5B4FC">Immutable UI State Wrappers</text>
+      </g>
+
+      <!-- Node 4: Navigation Router -->
+      <g transform="translate(0, 174)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#pres-sub)" stroke="#818CF8" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#E0E7FF">🗺️ App Router &amp; Nav</text>
+        <text x="14" y="38" class="node-text" fill="#A5B4FC">GoRouter &amp; Deep Linking</text>
+      </g>
     </g>
+  </g>
 
-    <!-- Connector 1 -->
-    <path d="M 210 162 L 240 162" class="arrow" />
-    <polygon points="243,162 236,158 236,166" fill="#64748B" />
+  <!-- ========================================== -->
+  <!-- 2. DOMAIN LAYER (CYAN THEME) -->
+  <!-- ========================================== -->
+  <g transform="translate(320, 75)" class="layer-box layer-domain">
+    <!-- Main Card Body -->
+    <rect x="0" y="0" width="260" height="330" rx="12" fill="url(#domain-grad)" stroke="#06B6D4" stroke-width="1.5" filter="url(#glow-domain)" />
+    
+    <!-- Top Header Bar -->
+    <rect x="0" y="0" width="260" height="42" rx="12" fill="#0891B2" fill-opacity="0.3" stroke="#06B6D4" stroke-width="1" />
+    <circle cx="20" cy="21" r="5" fill="#38BDF8" />
+    <text x="34" y="26" class="layer-title" font-size="13" fill="#CFFAFE">2. DOMAIN LAYER</text>
+    <text x="215" y="25" font-family="sans-serif" font-size="10" fill="#38BDF8">CORE LOGIC</text>
 
-    <!-- Layer 2: State Management -->
-    <g transform="translate(245, 85)">
-      <rect width="180" height="155" rx="10" fill="url(#layer-bloc)" stroke="#818CF8" stroke-width="1" />
-      <rect x="0" y="0" width="180" height="28" rx="10" fill="#818CF8" fill-opacity="0.2" />
-      <text x="90" y="19" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#818CF8">STATE / BLoC LAYER</text>
-      <text x="20" y="52" class="mono" font-size="11" fill="#E2E8F0">• BLoC / Cubits</text>
-      <text x="20" y="77" class="mono" font-size="11" fill="#E2E8F0">• Riverpod Notifiers</text>
-      <text x="20" y="102" class="mono" font-size="11" fill="#E2E8F0">• Event &amp; State Flow</text>
-      <text x="20" y="127" class="mono" font-size="11" fill="#E2E8F0">• Reactive Streams</text>
+    <!-- Layer Description -->
+    <text x="16" y="62" font-family="-apple-system, sans-serif" font-size="10.5" fill="#A5F3FC">Entities, Business Rules &amp; Contracts</text>
+
+    <!-- Sub-components (Expandable Nodes) -->
+    <g transform="translate(14, 75)">
+      <!-- Node 1: Entities -->
+      <g transform="translate(0, 0)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#domain-sub)" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#CFFAFE">💎 Domain Entities</text>
+        <text x="14" y="38" class="node-text" fill="#67E8F9">Pure Dart Data Classes (Freezed)</text>
+      </g>
+
+      <!-- Node 2: Use Cases -->
+      <g transform="translate(0, 58)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#domain-sub)" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#CFFAFE">⚙️ Use Cases / Interactors</text>
+        <text x="14" y="38" class="node-text" fill="#67E8F9">Business Logic Execution Units</text>
+      </g>
+
+      <!-- Node 3: Repository Interfaces -->
+      <g transform="translate(0, 116)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#domain-sub)" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#CFFAFE">📜 Repository Contracts</text>
+        <text x="14" y="38" class="node-text" fill="#67E8F9">Abstract Interfaces (Inversion)</text>
+      </g>
+
+      <!-- Node 4: Value Objects -->
+      <g transform="translate(0, 174)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#domain-sub)" stroke="#06B6D4" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#CFFAFE">🔒 Failures &amp; Either</text>
+        <text x="14" y="38" class="node-text" fill="#67E8F9">fpdart Functional Error Handling</text>
+      </g>
     </g>
+  </g>
 
-    <!-- Connector 2 -->
-    <path d="M 425 162 L 455 162" class="arrow" />
-    <polygon points="458,162 451,158 451,166" fill="#64748B" />
+  <!-- ========================================== -->
+  <!-- 3. DATA LAYER (PURPLE THEME) -->
+  <!-- ========================================== -->
+  <g transform="translate(610, 75)" class="layer-box layer-data">
+    <!-- Main Card Body -->
+    <rect x="0" y="0" width="260" height="330" rx="12" fill="url(#data-grad)" stroke="#8B5CF6" stroke-width="1.5" filter="url(#glow-data)" />
+    
+    <!-- Top Header Bar -->
+    <rect x="0" y="0" width="260" height="42" rx="12" fill="#7C3AED" fill-opacity="0.3" stroke="#8B5CF6" stroke-width="1" />
+    <circle cx="20" cy="21" r="5" fill="#C084FC" />
+    <text x="34" y="26" class="layer-title" font-size="13" fill="#F3E8FF">3. DATA LAYER</text>
+    <text x="200" y="25" font-family="sans-serif" font-size="10" fill="#C084FC">API &amp; STORAGE</text>
 
-    <!-- Layer 3: Domain Layer -->
-    <g transform="translate(460, 85)">
-      <rect width="180" height="155" rx="10" fill="url(#layer-domain)" stroke="#C084FC" stroke-width="1" />
-      <rect x="0" y="0" width="180" height="28" rx="10" fill="#C084FC" fill-opacity="0.2" />
-      <text x="90" y="19" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#C084FC">DOMAIN LAYER</text>
-      <text x="20" y="52" class="mono" font-size="11" fill="#E2E8F0">• Business Entities</text>
-      <text x="20" y="77" class="mono" font-size="11" fill="#E2E8F0">• Use Cases / Interactors</text>
-      <text x="20" y="102" class="mono" font-size="11" fill="#E2E8F0">• Repository Interfaces</text>
-      <text x="20" y="127" class="mono" font-size="11" fill="#E2E8F0">• Failures &amp; Either</text>
-    </g>
+    <!-- Layer Description -->
+    <text x="16" y="62" font-family="-apple-system, sans-serif" font-size="10.5" fill="#DDD6FE">Repositories, APIs &amp; Data Sources</text>
 
-    <!-- Connector 3 -->
-    <path d="M 640 162 L 670 162" class="arrow" />
-    <polygon points="673,162 666,158 666,166" fill="#64748B" />
+    <!-- Sub-components (Expandable Nodes) -->
+    <g transform="translate(14, 75)">
+      <!-- Node 1: Repo Implementations -->
+      <g transform="translate(0, 0)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#data-sub)" stroke="#8B5CF6" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#F3E8FF">📦 Repo Impl Classes</text>
+        <text x="14" y="38" class="node-text" fill="#C084FC">Concrete Data Repository Impl</text>
+      </g>
 
-    <!-- Layer 4: Data Layer -->
-    <g transform="translate(675, 85)">
-      <rect width="195" height="155" rx="10" fill="url(#layer-data)" stroke="#34D399" stroke-width="1" />
-      <rect x="0" y="0" width="195" height="28" rx="10" fill="#34D399" fill-opacity="0.2" />
-      <text x="97" y="19" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#34D399">DATA LAYER</text>
-      <text x="20" y="52" class="mono" font-size="11" fill="#E2E8F0">• Repository Impl</text>
-      <text x="20" y="77" class="mono" font-size="11" fill="#E2E8F0">• REST APIs (Dio/Http)</text>
-      <text x="20" y="102" class="mono" font-size="11" fill="#E2E8F0">• Firebase Services</text>
-      <text x="20" y="127" class="mono" font-size="11" fill="#E2E8F0">• Isar / Hive Local DB</text>
+      <!-- Node 2: REST API Clients -->
+      <g transform="translate(0, 58)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#data-sub)" stroke="#8B5CF6" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#F3E8FF">🌐 REST API (Dio/Http)</text>
+        <text x="14" y="38" class="node-text" fill="#C084FC">Remote Endpoints &amp; JSON DTOs</text>
+      </g>
+
+      <!-- Node 3: Firebase Services -->
+      <g transform="translate(0, 116)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#data-sub)" stroke="#8B5CF6" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#F3E8FF">🔥 Firebase Services</text>
+        <text x="14" y="38" class="node-text" fill="#C084FC">Firestore, Auth &amp; Cloud Storage</text>
+      </g>
+
+      <!-- Node 4: Local Database -->
+      <g transform="translate(0, 174)" class="sub-node">
+        <rect x="0" y="0" width="232" height="50" rx="8" fill="url(#data-sub)" stroke="#8B5CF6" stroke-width="1" stroke-opacity="0.5" />
+        <text x="14" y="22" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#F3E8FF">💾 Local DB (Hive/Isar)</text>
+        <text x="14" y="38" class="node-text" fill="#C084FC">Cache &amp; Secure Storage</text>
+      </g>
     </g>
   </g>
 </svg>
