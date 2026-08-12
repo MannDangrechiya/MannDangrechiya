@@ -41,6 +41,7 @@ def fetch_stats():
 
     return {
         "username": GITHUB_USER,
+        "isFallback": True,
         "github": {
             "stars": stars,
             "forks": forks,
@@ -120,6 +121,8 @@ def generate_svg(data):
   <g transform="translate(30, 24)">
     <text x="0" y="16" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="800" fill="#F8FAFC" letter-spacing="1">LIVE PORTFOLIO &amp; CODING METRICS</text>
     <text x="0" y="34" font-family="-apple-system, sans-serif" font-size="10.5" fill="#94A3B8">Synced via Cloudflare Worker API • Updated: {updated}</text>
+    <rect x="520" y="2" width="200" height="20" rx="10" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="0.8" />
+    <text x="620" y="15" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#FBBF24" text-anchor="middle">⚠️ Cached / API Standby</text>
   </g>
 
   <!-- Divider Line -->

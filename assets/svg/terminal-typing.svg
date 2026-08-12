@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 280" width="100%" height="100%">
+  <defs>
+    <!-- Dark Cyber Terminal Background -->
+    <linearGradient id="term-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080B14" />
+      <stop offset="100%" stop-color="#0E1322" />
+    </linearGradient>
+
+    <!-- Header Bar Gradient -->
+    <linearGradient id="term-header" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <linearGradient id="term-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.5" />
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#22C55E" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="cyan-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .term-text { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; }
+      .prompt { fill: #22C55E; font-weight: 700; }
+      .path { fill: #38BDF8; font-weight: 600; }
+      .cmd { fill: #F8FAFC; font-weight: 600; }
+      .output { fill: #CBD5E1; font-weight: 500; }
+      .highlight { fill: #818CF8; font-weight: 700; }
+      .replay-btn { cursor: pointer; transition: all 0.2s ease; }
+      .replay-btn:hover { fill: #38BDF8; }
+    </style>
+  </defs>
+
+  <!-- Outer Window Container -->
+  <rect x="2" y="2" width="816" height="276" rx="16" fill="url(#term-bg)" stroke="url(#term-border)" stroke-width="2" />
+
+  <!-- Terminal Title Bar Header -->
+  <rect x="2" y="2" width="816" height="38" rx="14" fill="url(#term-header)" />
+  <!-- Bottom square corners for header rect blend -->
+  <rect x="2" y="26" width="816" height="14" fill="url(#term-header)" />
+  <line x1="2" y1="40" x2="818" y2="40" stroke="#1E293B" stroke-width="1.5" />
+
+  <!-- Window Dots (macOS Style) -->
+  <circle cx="22" cy="20" r="6" fill="#FF5F56" />
+  <circle cx="40" cy="20" r="6" fill="#FFBD2E" />
+  <circle cx="58" cy="20" r="6" fill="#27C93F" />
+
+  <!-- Terminal Window Title -->
+  <text x="410" y="24" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#94A3B8" text-anchor="middle">
+    mann@macbook-pro: ~ (zsh)
+  </text>
+
+  <!-- Replay Button SVG Link -->
+  <a href="assets/svg/terminal-typing.svg" target="_top">
+    <g transform="translate(710, 10)" class="replay-btn">
+      <rect x="0" y="0" width="85" height="22" rx="11" fill="rgba(56,189,248,0.12)" stroke="#38BDF8" stroke-width="1" />
+      <text x="42" y="15" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38BDF8" text-anchor="middle">
+        ↺ REPLAY
+      </text>
+    </g>
+  </a>
+
+  <!-- ========================================== -->
+  <!-- TERMINAL CONTENT & TYPING SMIL ANIMATIONS -->
+  <!-- ========================================== -->
+  <g transform="translate(25, 70)" class="term-text">
+
+    <!-- LINE 1: $ whoami -->
+    <g>
+      <text x="0" y="0">
+        <tspan class="prompt">mann@macbook</tspan><tspan fill="#64748B">:</tspan><tspan class="path">~</tspan><tspan class="prompt">$</tspan> <tspan class="cmd">whoami</tspan>
+      </text>
+    </g>
+
+    <!-- OUTPUT 1: Mann Dangrechiya -->
+    <g opacity="0">
+      <animate attributeName="opacity" to="1" begin="0.8s" dur="0.2s" fill="freeze" />
+      <text x="0" y="24" class="output">
+        &gt; <tspan font-weight="700" fill="#38BDF8">Mann Dangrechiya</tspan> — Flutter Developer &amp; Mobile App Engineer 🚀
+      </text>
+    </g>
+
+    <!-- LINE 2: $ cat skills.md -->
+    <g opacity="0">
+      <animate attributeName="opacity" to="1" begin="1.8s" dur="0.2s" fill="freeze" />
+      <text x="0" y="60">
+        <tspan class="prompt">mann@macbook</tspan><tspan fill="#64748B">:</tspan><tspan class="path">~</tspan><tspan class="prompt">$</tspan> <tspan class="cmd">cat skills.md</tspan>
+      </text>
+    </g>
+
+    <!-- OUTPUT 2: Skills list -->
+    <g opacity="0">
+      <animate attributeName="opacity" to="1" begin="2.6s" dur="0.2s" fill="freeze" />
+      <text x="0" y="84" class="output">
+        &gt; <tspan class="highlight">Flutter</tspan> · <tspan class="highlight">Dart</tspan> · <tspan fill="#F59E0B" font-weight="700">Firebase</tspan> · <tspan fill="#EC4899" font-weight="700">Flame Engine</tspan> · <tspan fill="#06B6D4" font-weight="700">Rive 3D</tspan> · <tspan fill="#34D399" font-weight="700">Clean Architecture</tspan>
+      </text>
+    </g>
+
+    <!-- LINE 3: $ uptime -->
+    <g opacity="0">
+      <animate attributeName="opacity" to="1" begin="3.6s" dur="0.2s" fill="freeze" />
+      <text x="0" y="120">
+        <tspan class="prompt">mann@macbook</tspan><tspan fill="#64748B">:</tspan><tspan class="path">~</tspan><tspan class="prompt">$</tspan> <tspan class="cmd">uptime</tspan>
+      </text>
+    </g>
+
+    <!-- OUTPUT 3: ⚡ 3 years mobile dev -->
+    <g opacity="0">
+      <animate attributeName="opacity" to="1" begin="4.3s" dur="0.2s" fill="freeze" />
+      <text x="0" y="144" class="output">
+        &gt; <tspan fill="#FBBF24" font-weight="700">⚡ 3+ years</tspan> of production mobile development (PrintDeed &amp; TechyPanther)
+      </text>
+    </g>
+
+    <!-- LINE 4: Active prompt with Blinking Cursor -->
+    <g opacity="0">
+      <animate attributeName="opacity" to="1" begin="5.2s" dur="0.2s" fill="freeze" />
+      <text x="0" y="180">
+        <tspan class="prompt">mann@macbook</tspan><tspan fill="#64748B">:</tspan><tspan class="path">~</tspan><tspan class="prompt">$</tspan> <tspan fill="#38BDF8" font-weight="700">▋</tspan>
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+      </text>
+    </g>
+
+  </g>
+</svg>

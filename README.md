@@ -27,6 +27,11 @@
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
 
+  <br/><br/>
+
+  <!-- Animated Interactive Terminal Typing SVG -->
+  <img src="assets/svg/terminal-typing.svg" alt="Animated Terminal Shell Typing Component" width="100%" />
+
 </div>
 
 <br/>
@@ -148,6 +153,11 @@
       </td>
     </tr>
   </table>
+
+  <br/><br/>
+
+  <!-- Visual My Dev Setup Workspace Card -->
+  <img src="assets/svg/dev-setup-card.svg" alt="My Daily Engineering Workspace and Dev Setup" width="100%" />
 </div>
 
 <br/>
@@ -528,6 +538,7 @@
 
   <!-- Documentation Nav Bar -->
   <font size="2" color="#64748B">
+    <a href="PROFILE_CHANGELOG.md"><strong>PROFILE CHANGELOG</strong></a> &bull;
     <a href="INSTALL.md"><strong>INSTALLATION GUIDE</strong></a> &bull;
     <a href="CUSTOMIZATION.md"><strong>CUSTOMIZATION GUIDE</strong></a> &bull;
     <a href="DEPLOYMENT.md"><strong>DEPLOYMENT &amp; ACTIONS</strong></a> &bull;

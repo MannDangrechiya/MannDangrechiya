@@ -1,0 +1,75 @@
+name: Consolidated Profile Manager
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'  # Runs every 3 hours
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: profile-update
+  cancel-in-progress: true
+
+jobs:
+  update-profile-dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Step 1 - Generate Profile Stats SVG Card
+        run: python scripts/generate_stats_svg.py
+
+      - name: Step 2 - Generate Developer XP & Rank Bar
+        run: python scripts/generate_xp_bar.py
+
+      - name: Step 3 - Generate 7x52 Contribution Heatmap Matrix
+        run: python scripts/generate_heatmap.py
+
+      - name: Step 4 - Fetch Dev.to / Medium Articles Grid
+        run: python scripts/fetch_articles.py
+
+      - name: Step 5 - Update Recent GitHub Activity Feed
+        run: python scripts/update_activity_feed.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Step 6 - Generate Contribution Snake Animation
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: MannDangrechiya
+          outputs: |
+            assets/svg/github-contribution-grid-snake-dark.svg?palette=github-dark
+        continue-on-error: true
+
+      - name: Step 7 - Generate Dated Profile Changelog Entry
+        run: python scripts/update_changelog.py
+
+      - name: Step 8 - Commit & Push All Updated Assets
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "[Bot] Update profile stats, XP, heatmap & activity feed"
+          file_pattern: "assets/svg/*.svg README.md assets/stats.svg PROFILE_CHANGELOG.md"
+
+      - name: Step 9 - Notify Discord Webhook on Failure
+        if: failure()
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        run: |
+          if [ -n "$DISCORD_WEBHOOK" ]; then
+            curl -H "Content-Type: application/json" \
+                 -X POST \
+                 -d '{"username": "Profile Manager Bot", "content": "⚠️ **Alert**: Consolidated GitHub Profile README workflow build failed for repo MannDangrechiya/.github."}' \
+                 "$DISCORD_WEBHOOK"
+          else
+            echo "Discord webhook URL not configured, skipping alert."
+          fi
