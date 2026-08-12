@@ -327,6 +327,12 @@
   
   <br/><br/>
 
+  <!-- Live Cloudflare API Stats SVG Card -->
+  <h4>⚡ Real-Time Profile &amp; Coding Activity (Cloudflare Worker API)</h4>
+  <img src="assets/stats.svg" alt="Live Portfolio &amp; Coding Metrics" width="97%" />
+
+  <br/><br/>
+
   <!-- Stats Grid -->
   <a href="https://github.com/MannDangrechiya">
     <img src="https://github-readme-stats.vercel.app/api?username=MannDangrechiya&show_icons=true&theme=react&bg_color=090D16&title_color=38BDF8&text_color=94A3B8&icon_color=6366F1&border_color=1E293B&hide_border=false" alt="Mann Dangrechiya's GitHub Stats" width="48%" />
@@ -348,6 +354,23 @@
   <!-- Contribution Snake Animation -->
   <h4>🐍 Contribution Matrix Activity</h4>
   <img src="assets/svg/github-contribution-grid-snake-dark.svg" alt="GitHub Contribution Snake" width="97%" />
+
+  <br/><br/>
+
+  <!-- Latest Activity Feed -->
+  <h4>📡 Recent Public Activity Feed</h4>
+
+<!-- START_SECTION:activity -->
+
+| Activity | Repository | Details | Timestamp |
+| :--- | :--- | :--- | :--- |
+| 🚀 Push | [MannDangrechiya/MannDangrechiya](https://github.com/MannDangrechiya/MannDangrechiya) | `Pushed commits` | `Aug 12, 2026 17:10 UTC` |
+| 🚀 Push | [MannDangrechiya/CineVault](https://github.com/MannDangrechiya/CineVault) | `Pushed commits` | `Aug 10, 2026 16:29 UTC` |
+| 🚀 Push | [MannDangrechiya/CineVault](https://github.com/MannDangrechiya/CineVault) | `Pushed commits` | `Aug 10, 2026 16:30 UTC` |
+| 🚀 Push | [MannDangrechiya/CineVault](https://github.com/MannDangrechiya/CineVault) | `Pushed commits` | `Aug 10, 2026 16:30 UTC` |
+| 🚀 Push | [MannDangrechiya/CineVault](https://github.com/MannDangrechiya/CineVault) | `Pushed commits` | `Aug 10, 2026 16:30 UTC` |
+
+<!-- END_SECTION:activity -->
 </div>
 
 <br/>

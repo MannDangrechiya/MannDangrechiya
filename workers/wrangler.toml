@@ -1,0 +1,7 @@
+name = "mann-stats-api"
+main = "stats-worker.js"
+compatibility_date = "2026-08-01"
+
+[vars]
+GITHUB_USERNAME = "MannDangrechiya"
+WAKATIME_USER = "manndangrechiya"

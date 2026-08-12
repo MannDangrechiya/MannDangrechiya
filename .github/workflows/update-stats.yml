@@ -1,0 +1,33 @@
+name: Update Live Stats SVG
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-stats-svg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate Live Stats SVG Card
+        run: python scripts/generate_stats_svg.py
+
+      - name: Commit and Push Updated SVG
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/stats.svg
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(stats): update live analytics SVG card [skip ci]" && git push origin main)
