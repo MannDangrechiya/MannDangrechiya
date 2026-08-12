@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="sp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070913" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#05070E" />
+    </linearGradient>
+
+    <linearGradient id="sp-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1DB954" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Vinyl Disc Reflection & Grooves -->
+    <radialGradient id="vinyl-groove" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#181818" />
+      <stop offset="35%" stop-color="#0A0A0A" />
+      <stop offset="37%" stop-color="#262626" />
+      <stop offset="60%" stop-color="#121212" />
+      <stop offset="62%" stop-color="#2A2A2A" />
+      <stop offset="85%" stop-color="#0A0A0A" />
+      <stop offset="100%" stop-color="#1F1F1F" />
+    </radialGradient>
+
+    <!-- Album Art Clip Path -->
+    <clipPath id="album-clip">
+      <circle cx="90" cy="90" r="24" />
+    </clipPath>
+
+    <!-- Glow Filter for Spotify Green -->
+    <filter id="spotify-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Container -->
+  <rect x="2" y="2" width="516" height="176" rx="20" fill="url(#sp-bg)" stroke="url(#sp-border)" stroke-width="2" />
+
+  <!-- Spotify Header Logo & Live Badge -->
+  <g transform="translate(200, 30)">
+    <!-- Spotify Icon -->
+    <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.5 17.3c-.2.3-.6.4-.9.2-2.8-1.7-6.3-2.1-10.5-1.1-.3.1-.7-.1-.8-.4-.1-.3.1-.7.4-.8 4.6-1 8.5-.6 11.6 1.3.3.1.4.6.2.8zm1.5-3.3c-.3.4-.8.5-1.2.3-3.2-2-8.1-2.6-11.9-1.4-.4.1-.9-.1-1-.5-.1-.4.1-.9.5-1 4.3-1.3 9.7-.7 13.3 1.5.4.2.5.7.3 1.1zm.1-3.4C15.2 8.3 8.9 8.1 5.2 9.2c-.5.2-1.1-.1-1.3-.6-.2-.5.1-1.1.6-1.3 4.3-1.3 11.2-1 15.6 1.6.5.3.6.9.3 1.4-.3.4-.9.6-1.3.3z" fill="#1DB954" filter="url(#spotify-glow)"/>
+    <text x="32" y="16" font-family="'Inter', sans-serif" font-size="14" font-weight="800" fill="#F8FAFC" letter-spacing="0.5">
+      SPOTIFY NOW PLAYING
+    </text>
+
+    <!-- Animated Equalizer Bars -->
+    <g transform="translate(230, 2)">
+      <rect x="0" y="4" width="3" height="12" fill="#1DB954" rx="1.5">
+        <animate attributeName="height" values="6;16;8;18;6" dur="0.8s" repeatCount="indefinite" />
+        <animate attributeName="y" values="9;4;8;3;9" dur="0.8s" repeatCount="indefinite" />
+      </rect>
+      <rect x="6" y="2" width="3" height="16" fill="#1DB954" rx="1.5">
+        <animate attributeName="height" values="16;6;18;8;16" dur="0.7s" repeatCount="indefinite" />
+        <animate attributeName="y" values="4;9;3;8;4" dur="0.7s" repeatCount="indefinite" />
+      </rect>
+      <rect x="12" y="6" width="3" height="10" fill="#1DB954" rx="1.5">
+        <animate attributeName="height" values="8;18;6;16;8" dur="0.9s" repeatCount="indefinite" />
+        <animate attributeName="y" values="8;3;9;4;8" dur="0.9s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- VINYL RECORD DISK & ANIMATED ROTATION -->
+  <!-- ========================================== -->
+  <g transform="translate(15, 0)">
+    <!-- Rotating Vinyl Group -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0 90 90" to="360 90 90" dur="4s" repeatCount="indefinite" />
+      
+      <!-- Outer Disc Body -->
+      <circle cx="90" cy="90" r="68" fill="url(#vinyl-groove)" stroke="#333" stroke-width="1.5" filter="drop-shadow(0 4px 12px fill-opacity)" />
+      
+      <!-- Disc Grooves Rings -->
+      <circle cx="90" cy="90" r="60" fill="none" stroke="#222" stroke-width="0.8" />
+      <circle cx="90" cy="90" r="52" fill="none" stroke="#1A1A1A" stroke-width="0.8" />
+      <circle cx="90" cy="90" r="44" fill="none" stroke="#282828" stroke-width="0.8" />
+      <circle cx="90" cy="90" r="34" fill="none" stroke="#1A1A1A" stroke-width="0.8" />
+      
+      <!-- Center Label (Album Art Placeholder / Stylized Disc Center) -->
+      <circle cx="90" cy="90" r="25" fill="#6366F1" stroke="#1DB954" stroke-width="2" />
+      
+      <!-- Album Art Image overlay inside label -->
+      <image href="https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5a86d7" x="66" y="66" width="48" height="48" clip-path="url(#album-clip)" preserveAspectRatio="xMidYMid slice"/>
+
+      <!-- Center Spindle Hole -->
+      <circle cx="90" cy="90" r="4" fill="#070913" stroke="#94A3B8" stroke-width="1" />
+    </g>
+
+    <!-- Tone Arm Needle (Stationary / Placed on record) -->
+    <g transform="translate(140, 25)">
+      <!-- Tone arm base pivot -->
+      <circle cx="10" cy="10" r="8" fill="#334155" stroke="#64748B" stroke-width="1.5" />
+      <circle cx="10" cy="10" r="4" fill="#94A3B8" />
+      <!-- Arm metal rod -->
+      <path d="M10 10 L-22 55 L-40 68" fill="none" stroke="#CBD5E1" stroke-width="2.5" stroke-linecap="round" />
+      <!-- Cartridge headshell & needle tip -->
+      <rect x="-46" y="64" width="10" height="7" rx="1.5" fill="#1DB954" transform="rotate(25 -41 67)" />
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- TRACK INFORMATION DETAILS -->
+  <!-- ========================================== -->
+  <g transform="translate(200, 75)">
+    <!-- Track Title -->
+    <text x="0" y="16" font-family="'Inter', sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">
+      Starboy (feat. Daft Punk)
+    </text>
+    
+    <!-- Artist Name -->
+    <text x="0" y="38" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#38BDF8">
+      The Weeknd, Daft Punk
+    </text>
+    
+    <!-- Album Title -->
+    <text x="0" y="56" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500" fill="#94A3B8">
+      Album: Starboy • synthwave / coding beats
+    </text>
+
+    <!-- Status Badge -->
+    <g transform="translate(0, 68)">
+      <rect x="0" y="0" width="100" height="20" rx="10" fill="rgba(29,185,84,0.15)" stroke="#1DB954" stroke-width="1" />
+      <circle cx="12" cy="10" r="3.5" fill="#1DB954">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.2s" repeatCount="indefinite" />
+      </circle>
+      <text x="24" y="14" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#1DB954">
+        PLAYING NOW
+      </text>
+    </g>
+  </g>
+</svg>

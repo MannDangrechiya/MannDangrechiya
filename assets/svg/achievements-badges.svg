@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" width="100%" height="100%">
+  <defs>
+    <!-- Background & Glassmorphic Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070913" />
+      <stop offset="50%" stop-color="#0D1126" />
+      <stop offset="100%" stop-color="#05070E" />
+    </linearGradient>
+
+    <linearGradient id="card-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Badge Hex Border Gradients -->
+    <linearGradient id="grad-flutter" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+
+    <linearGradient id="grad-firebase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+
+    <linearGradient id="grad-pr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+
+    <linearGradient id="grad-hero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <linearGradient id="grad-wizard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow-flutter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-firebase" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-pr" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-hero" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="glow-wizard" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .badge-hex { transition: all 0.3s ease; cursor: pointer; }
+      .badge-hex:hover { transform: translateY(-5px); filter: drop-shadow(0 8px 20px rgba(56,189,248,0.4)); }
+      .pulse-glow { animation: pulse 3s infinite ease-in-out; }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- Base Container -->
+  <rect x="2" y="2" width="916" height="336" rx="20" fill="url(#bg-grad)" stroke="url(#card-border)" stroke-width="2" />
+  
+  <!-- Subtle Header Line Grid -->
+  <pattern id="dot-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <circle cx="2" cy="2" r="1" fill="#1E293B" opacity="0.6" />
+  </pattern>
+  <rect x="10" y="10" width="900" height="320" fill="url(#dot-grid)" rx="16" />
+
+  <!-- Header Title Section -->
+  <g transform="translate(30, 45)">
+    <!-- Trophy Icon -->
+    <path d="M12 2L15 8L22 9L17 14L18 21L12 18L6 21L7 14L2 9L9 8L12 2Z" fill="#FBBF24" opacity="0.9" transform="scale(0.9)"/>
+    <text x="30" y="14" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" fill="#F8FAFC" letter-spacing="1">
+      SPECIALIZED ENGINEERING BADGES &amp; ACHIEVEMENTS
+    </text>
+    <text x="30" y="32" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500" fill="#94A3B8">
+      GAMIFIED DEVELOPMENT MILESTONES • UNLOCKED VIA GITHUB CONTRIB &amp; FLUTTER ARCHITECTURE
+    </text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- BADGE 1: FLUTTER NINJA (x: 50) -->
+  <!-- ========================================== -->
+  <g transform="translate(50, 110)" class="badge-hex">
+    <!-- Outer Glow Hexagon -->
+    <polygon points="70,5 125,36.6 125,99.9 70,131.5 15,99.9 15,36.6" fill="#090D1A" stroke="url(#grad-flutter)" stroke-width="3" filter="url(#glow-flutter)" />
+    <!-- Inner Accent Hex -->
+    <polygon points="70,12 118,39.6 118,96.9 70,124.5 22,96.9 22,39.6" fill="#0D1527" stroke="#38BDF8" stroke-width="1" opacity="0.8" />
+    
+    <!-- Ninja Shuriken / Flutter Icon -->
+    <g transform="translate(48, 42)">
+      <!-- Cyber Ninja Shuriken Star -->
+      <path d="M22 0 L26 14 L40 18 L26 22 L22 36 L18 22 L4 18 L18 14 Z" fill="#38BDF8" opacity="0.9"/>
+      <!-- Flutter Wing Overlay -->
+      <path d="M10 8 L22 20 L15 27 L3 15 Z" fill="#6366F1" />
+      <path d="M22 20 L31 11 L37 17 L22 32 Z" fill="#38BDF8" />
+    </g>
+
+    <!-- Badge Title & Requirement -->
+    <text x="70" y="152" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#38BDF8" text-anchor="middle">Flutter Ninja</text>
+    <text x="70" y="168" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94A3B8" text-anchor="middle">100+ Commits</text>
+    
+    <!-- Status Pill -->
+    <rect x="35" y="180" width="70" height="18" rx="9" fill="rgba(56,189,248,0.15)" stroke="#38BDF8" stroke-width="1" />
+    <text x="70" y="192" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#38BDF8" text-anchor="middle">UNLOCKED</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- BADGE 2: FIREBASE MASTER (x: 220) -->
+  <!-- ========================================== -->
+  <g transform="translate(220, 110)" class="badge-hex">
+    <!-- Outer Glow Hexagon -->
+    <polygon points="70,5 125,36.6 125,99.9 70,131.5 15,99.9 15,36.6" fill="#090D1A" stroke="url(#grad-firebase)" stroke-width="3" filter="url(#glow-firebase)" />
+    <!-- Inner Accent Hex -->
+    <polygon points="70,12 118,39.6 118,96.9 70,124.5 22,96.9 22,39.6" fill="#1B1214" stroke="#F59E0B" stroke-width="1" opacity="0.8" />
+    
+    <!-- Flame & Firestore Icon -->
+    <g transform="translate(48, 40)">
+      <!-- Flame outer -->
+      <path d="M22 2 C22 2 34 14 34 24 C34 31 28.6 36 22 36 C15.4 36 10 31 10 24 C10 17 17 11 17 11 C17 11 15 17 18 21 C20 23 23 23 23 20 C23 16 22 2 22 2 Z" fill="url(#grad-firebase)" />
+      <!-- Flame inner core -->
+      <path d="M22 18 C22 18 27 23 27 27 C27 30 24.8 32 22 32 C19.2 32 17 30 17 27 C17 23 22 18 22 18 Z" fill="#FBBF24" />
+    </g>
+
+    <!-- Badge Title & Requirement -->
+    <text x="70" y="152" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#F59E0B" text-anchor="middle">Firebase Master</text>
+    <text x="70" y="168" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94A3B8" text-anchor="middle">Firestore Apps</text>
+
+    <!-- Status Pill -->
+    <rect x="35" y="180" width="70" height="18" rx="9" fill="rgba(245,158,11,0.15)" stroke="#F59E0B" stroke-width="1" />
+    <text x="70" y="192" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#F59E0B" text-anchor="middle">UNLOCKED</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- BADGE 3: PR PIONEER (x: 390) -->
+  <!-- ========================================== -->
+  <g transform="translate(390, 110)" class="badge-hex">
+    <!-- Outer Glow Hexagon -->
+    <polygon points="70,5 125,36.6 125,99.9 70,131.5 15,99.9 15,36.6" fill="#090D1A" stroke="url(#grad-pr)" stroke-width="3" filter="url(#glow-pr)" />
+    <!-- Inner Accent Hex -->
+    <polygon points="70,12 118,39.6 118,96.9 70,124.5 22,96.9 22,39.6" fill="#160F26" stroke="#C084FC" stroke-width="1" opacity="0.8" />
+    
+    <!-- Git Pull Request Icon -->
+    <g transform="translate(48, 42)">
+      <circle cx="10" cy="10" r="5" fill="#C084FC" stroke="#7C3AED" stroke-width="2"/>
+      <circle cx="10" cy="30" r="5" fill="#C084FC" stroke="#7C3AED" stroke-width="2"/>
+      <circle cx="30" cy="20" r="5" fill="#A855F7" stroke="#C084FC" stroke-width="2"/>
+      <!-- Lines -->
+      <line x1="10" y1="15" x2="10" y2="25" stroke="#C084FC" stroke-width="2.5" />
+      <path d="M10 25 C 10 20, 20 20, 25 20" fill="none" stroke="#C084FC" stroke-width="2.5" />
+    </g>
+
+    <!-- Badge Title & Requirement -->
+    <text x="70" y="152" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#C084FC" text-anchor="middle">PR Pioneer</text>
+    <text x="70" y="168" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94A3B8" text-anchor="middle">Merged PRs</text>
+
+    <!-- Status Pill -->
+    <rect x="35" y="180" width="70" height="18" rx="9" fill="rgba(192,132,252,0.15)" stroke="#C084FC" stroke-width="1" />
+    <text x="70" y="192" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#C084FC" text-anchor="middle">UNLOCKED</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- BADGE 4: HACKATHON HERO (x: 560) -->
+  <!-- ========================================== -->
+  <g transform="translate(560, 110)" class="badge-hex">
+    <!-- Outer Glow Hexagon -->
+    <polygon points="70,5 125,36.6 125,99.9 70,131.5 15,99.9 15,36.6" fill="#090D1A" stroke="url(#grad-hero)" stroke-width="3" filter="url(#glow-hero)" />
+    <!-- Inner Accent Hex -->
+    <polygon points="70,12 118,39.6 118,96.9 70,124.5 22,96.9 22,39.6" fill="#1C180A" stroke="#FBBF24" stroke-width="1" opacity="0.8" />
+    
+    <!-- Hero Shield & Trophy Icon -->
+    <g transform="translate(48, 42)">
+      <!-- Shield -->
+      <path d="M20 2 L34 8 V20 C34 30 20 36 20 36 C20 36 6 30 6 20 V8 Z" fill="none" stroke="#FBBF24" stroke-width="2.5" />
+      <!-- Star inside -->
+      <polygon points="20,10 23,17 30,17 24,21 26,28 20,24 14,28 16,21 10,17 17,17" fill="#FBBF24" />
+    </g>
+
+    <!-- Badge Title & Requirement -->
+    <text x="70" y="152" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#FBBF24" text-anchor="middle">Hackathon Hero</text>
+    <text x="70" y="168" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94A3B8" text-anchor="middle">Champion</text>
+
+    <!-- Status Pill -->
+    <rect x="35" y="180" width="70" height="18" rx="9" fill="rgba(251,191,36,0.15)" stroke="#FBBF24" stroke-width="1" />
+    <text x="70" y="192" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#FBBF24" text-anchor="middle">ACTIVE</text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- BADGE 5: 3D WIZARD (x: 730) -->
+  <!-- ========================================== -->
+  <g transform="translate(730, 110)" class="badge-hex">
+    <!-- Outer Glow Hexagon -->
+    <polygon points="70,5 125,36.6 125,99.9 70,131.5 15,99.9 15,36.6" fill="#090D1A" stroke="url(#grad-wizard)" stroke-width="3" filter="url(#glow-wizard)" />
+    <!-- Inner Accent Hex -->
+    <polygon points="70,12 118,39.6 118,96.9 70,124.5 22,96.9 22,39.6" fill="#180C1B" stroke="#F472B6" stroke-width="1" opacity="0.8" />
+    
+    <!-- 3D Isometric Cube Icon -->
+    <g transform="translate(48, 42)">
+      <!-- Top Face -->
+      <polygon points="20,4 35,12 20,20 5,12" fill="#F472B6" opacity="0.9" />
+      <!-- Left Face -->
+      <polygon points="5,12 20,20 20,36 5,28" fill="#06B6D4" opacity="0.8" />
+      <!-- Right Face -->
+      <polygon points="20,20 35,12 35,28 20,36" fill="#EC4899" opacity="0.9" />
+      <!-- Wand sparkle -->
+      <circle cx="33" cy="6" r="3" fill="#FBBF24" />
+    </g>
+
+    <!-- Badge Title & Requirement -->
+    <text x="70" y="152" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#F472B6" text-anchor="middle">3D Wizard</text>
+    <text x="70" y="168" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="600" fill="#94A3B8" text-anchor="middle">Flame &amp; Rive 3D</text>
+
+    <!-- Status Pill -->
+    <rect x="35" y="180" width="70" height="18" rx="9" fill="rgba(244,114,182,0.15)" stroke="#F472B6" stroke-width="1" />
+    <text x="70" y="192" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#F472B6" text-anchor="middle">UNLOCKED</text>
+  </g>
+</svg>

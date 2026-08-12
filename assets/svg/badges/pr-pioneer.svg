@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 180" width="140" height="180">
+  <defs>
+    <linearGradient id="grad-pr" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C084FC" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <polygon points="70,5 125,36.6 125,99.9 70,131.5 15,99.9 15,36.6" fill="#070913" stroke="url(#grad-pr)" stroke-width="3" filter="url(#glow)" />
+  <polygon points="70,12 118,39.6 118,96.9 70,124.5 22,96.9 22,39.6" fill="#160F26" stroke="#C084FC" stroke-width="1" opacity="0.8" />
+  <g transform="translate(48, 42)">
+    <circle cx="10" cy="10" r="5" fill="#C084FC" stroke="#7C3AED" stroke-width="2"/>
+    <circle cx="10" cy="30" r="5" fill="#C084FC" stroke="#7C3AED" stroke-width="2"/>
+    <circle cx="30" cy="20" r="5" fill="#A855F7" stroke="#C084FC" stroke-width="2"/>
+    <line x1="10" y1="15" x2="10" y2="25" stroke="#C084FC" stroke-width="2.5" />
+    <path d="M10 25 C 10 20, 20 20, 25 20" fill="none" stroke="#C084FC" stroke-width="2.5" />
+  </g>
+  <text x="70" y="152" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#C084FC" text-anchor="middle">PR Pioneer</text>
+  <text x="70" y="168" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#94A3B8" text-anchor="middle">Merged PRs</text>
+</svg>

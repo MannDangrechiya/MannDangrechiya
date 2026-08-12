@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 180" width="140" height="180">
+  <defs>
+    <linearGradient id="grad-wizard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <polygon points="70,5 125,36.6 125,99.9 70,131.5 15,99.9 15,36.6" fill="#070913" stroke="url(#grad-wizard)" stroke-width="3" filter="url(#glow)" />
+  <polygon points="70,12 118,39.6 118,96.9 70,124.5 22,96.9 22,39.6" fill="#180C1B" stroke="#F472B6" stroke-width="1" opacity="0.8" />
+  <g transform="translate(48, 42)">
+    <polygon points="20,4 35,12 20,20 5,12" fill="#F472B6" opacity="0.9" />
+    <polygon points="5,12 20,20 20,36 5,28" fill="#06B6D4" opacity="0.8" />
+    <polygon points="20,20 35,12 35,28 20,36" fill="#EC4899" opacity="0.9" />
+    <circle cx="33" cy="6" r="3" fill="#FBBF24" />
+  </g>
+  <text x="70" y="152" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#F472B6" text-anchor="middle">3D Wizard</text>
+  <text x="70" y="168" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#94A3B8" text-anchor="middle">Flame &amp; Rive 3D</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 180" width="140" height="180">
+  <defs>
+    <linearGradient id="grad-hero" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <polygon points="70,5 125,36.6 125,99.9 70,131.5 15,99.9 15,36.6" fill="#070913" stroke="url(#grad-hero)" stroke-width="3" filter="url(#glow)" />
+  <polygon points="70,12 118,39.6 118,96.9 70,124.5 22,96.9 22,39.6" fill="#1C180A" stroke="#FBBF24" stroke-width="1" opacity="0.8" />
+  <g transform="translate(48, 42)">
+    <path d="M20 2 L34 8 V20 C34 30 20 36 20 36 C20 36 6 30 6 20 V8 Z" fill="none" stroke="#FBBF24" stroke-width="2.5" />
+    <polygon points="20,10 23,17 30,17 24,21 26,28 20,24 14,28 16,21 10,17 17,17" fill="#FBBF24" />
+  </g>
+  <text x="70" y="152" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#FBBF24" text-anchor="middle">Hackathon Hero</text>
+  <text x="70" y="168" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#94A3B8" text-anchor="middle">Champion</text>
+</svg>

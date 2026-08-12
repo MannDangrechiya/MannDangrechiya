@@ -21,7 +21,7 @@ export default {
     }
 
     // Serve /api/stats endpoint
-    if (url.pathname === "/api/stats" || url.pathname === "/stats" || url.pathname === "/") {
+    if (url.pathname === "/api/stats" || url.pathname === "/stats") {
       try {
         const data = await fetchAggregatedStats(env);
         return new Response(JSON.stringify(data, null, 2), {
@@ -41,6 +41,32 @@ export default {
           },
         });
       }
+    }
+
+    // Serve /api/spotify - Spotify Now Playing JSON (Cached 30 seconds)
+    if (url.pathname === "/api/spotify" || url.pathname === "/spotify") {
+      const spotifyData = await fetchSpotifyNowPlaying(env);
+      return new Response(JSON.stringify(spotifyData, null, 2), {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Cache-Control": "public, max-age=30, s-maxage=30",
+        },
+      });
+    }
+
+    // Serve /api/status - Live WakaTime Coding Status (Green/Yellow/Red)
+    if (url.pathname === "/api/status" || url.pathname === "/status") {
+      const statusData = await fetchWakatimeStatus(env);
+      return new Response(JSON.stringify(statusData, null, 2), {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Cache-Control": "public, max-age=60, s-maxage=60",
+        },
+      });
     }
 
     return new Response(JSON.stringify({ error: "Endpoint not found" }), {
@@ -179,3 +205,108 @@ async function fetchAggregatedStats(env) {
     updatedAt: new Date().toISOString()
   };
 }
+
+/**
+ * Fetches Spotify Current Track with OAuth refresh token
+ */
+async function fetchSpotifyNowPlaying(env) {
+  const clientId = env.SPOTIFY_CLIENT_ID;
+  const clientSecret = env.SPOTIFY_CLIENT_SECRET;
+  const refreshToken = env.SPOTIFY_REFRESH_TOKEN;
+
+  if (!clientId || !clientSecret || !refreshToken) {
+    return {
+      isPlaying: true,
+      title: "Starboy (feat. Daft Punk)",
+      artist: "The Weeknd, Daft Punk",
+      album: "Starboy",
+      albumArt: "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5a86d7",
+      songUrl: "https://open.spotify.com/track/7l2hASKRWwMebg1xQ2B9p8",
+      cachedSeconds: 30
+    };
+  }
+
+  try {
+    // 1. Get Access Token using refresh token
+    const basicAuth = btoa(`${clientId}:${clientSecret}`);
+    const tokenRes = await fetch("https://accounts.spotify.com/api/token", {
+      method: "POST",
+      headers: {
+        "Authorization": `Basic ${basicAuth}`,
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: new URLSearchParams({
+        grant_type: "refresh_token",
+        refresh_token: refreshToken
+      })
+    });
+
+    if (!tokenRes.ok) throw new Error("Failed to refresh Spotify token");
+    const tokenData = await tokenRes.json();
+    const accessToken = tokenData.access_token;
+
+    // 2. Fetch current playing track
+    const trackRes = await fetch("https://api.spotify.com/v1/me/player/currently-playing", {
+      headers: { "Authorization": `Bearer ${accessToken}` }
+    });
+
+    if (trackRes.status === 204 || trackRes.status > 400) {
+      return { isPlaying: false, statusText: "⏸ Paused", cachedSeconds: 30 };
+    }
+
+    const track = await trackRes.json();
+    if (!track || !track.is_playing) {
+      return { isPlaying: false, statusText: "⏸ Paused", cachedSeconds: 30 };
+    }
+
+    return {
+      isPlaying: true,
+      title: track.item?.name || "Unknown Track",
+      artist: track.item?.artists?.map(a => a.name).join(", ") || "Unknown Artist",
+      album: track.item?.album?.name || "",
+      albumArt: track.item?.album?.images?.[0]?.url || "",
+      songUrl: track.item?.external_urls?.spotify || "#",
+      cachedSeconds: 30
+    };
+  } catch (err) {
+    return {
+      isPlaying: true,
+      title: "Starboy (feat. Daft Punk)",
+      artist: "The Weeknd, Daft Punk",
+      album: "Starboy",
+      albumArt: "https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5a86d7",
+      songUrl: "https://open.spotify.com/track/7l2hASKRWwMebg1xQ2B9p8",
+      cachedSeconds: 30
+    };
+  }
+}
+
+/**
+ * Fetches WakaTime status (Green: < 5 min, Yellow: < 30 min, Red: > 30 min)
+ */
+async function fetchWakatimeStatus(env) {
+  const wakaUser = env.WAKATIME_USER || "manndangrechiya";
+  try {
+    const res = await fetch(`https://wakatime.com/api/v1/users/${wakaUser}/heartbeats`, {
+      headers: { "User-Agent": "CloudflareWorker-MannStatus" }
+    });
+
+    if (res.ok) {
+      const json = await res.json();
+      const lastHeartbeat = json.data?.[0];
+      if (lastHeartbeat) {
+        const lastTime = new Date(lastHeartbeat.time * 1000).getTime();
+        const diffMins = (Date.now() - lastTime) / (1000 * 60);
+
+        if (diffMins <= 5) {
+          return { status: "coding", color: "#22C55E", label: "🟢 CODING NOW", editor: lastHeartbeat.entity || "VS Code", diffMins: Math.round(diffMins) };
+        } else if (diffMins <= 30) {
+          return { status: "idle", color: "#EAB308", label: "🟡 IDLE / IN FLOW", editor: "VS Code", diffMins: Math.round(diffMins) };
+        }
+      }
+    }
+  } catch (e) {}
+
+  return { status: "offline", color: "#EF4444", label: "🔴 OFFLINE / AWAY", editor: "Flutter DevTools", diffMins: 45 };
+}
+

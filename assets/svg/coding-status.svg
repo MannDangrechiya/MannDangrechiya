@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 50" width="280" height="50">
+  <defs>
+    <linearGradient id="st-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070913" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <linearGradient id="st-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Green Pulse Glow -->
+    <filter id="green-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Main Status Pill -->
+  <rect x="2" y="2" width="276" height="46" rx="23" fill="url(#st-bg)" stroke="url(#st-border)" stroke-width="1.5" />
+
+  <!-- Traffic Light LED Indicator -->
+  <g transform="translate(20, 25)">
+    <!-- Outer Glow Pulse Ring -->
+    <circle cx="0" cy="0" r="8" fill="#22C55E" opacity="0.4" filter="url(#green-glow)">
+      <animate attributeName="r" values="6;12;6" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <!-- Solid LED Core -->
+    <circle cx="0" cy="0" r="5" fill="#22C55E" stroke="#DCFCE7" stroke-width="1" />
+  </g>
+
+  <!-- Status Text & Details -->
+  <g transform="translate(42, 21)">
+    <text x="0" y="0" font-family="'Inter', sans-serif" font-size="11" font-weight="800" fill="#22C55E" letter-spacing="0.5">
+      🟢 LIVE CODING SESSION
+    </text>
+    <text x="0" y="15" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#94A3B8">
+      VS Code • Flutter Clean Arch
+    </text>
+  </g>
+</svg>

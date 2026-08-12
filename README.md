@@ -378,16 +378,25 @@
 <br/>
 
 <!-- ========================================== -->
-<!-- 08. ACHIEVEMENTS & ROADMAP -->
+<!-- 08. GAMIFICATION & ACHIEVEMENTS DASHBOARD -->
 <!-- ========================================== -->
 <div align="center">
-  <!-- Achievements SVG Card -->
-  <img src="assets/svg/achievements-card.svg" alt="Engineering Highlights" width="100%" />
+  <h3>🎮 GAMIFICATION &amp; ENGINEERING DASHBOARD</h3>
+  
+  <br/>
+
+  <!-- Developer XP Progress Bar -->
+  <img src="assets/svg/xp-bar.svg" alt="Developer XP Progress Bar" width="100%" />
 
   <br/><br/>
 
-  <!-- Strategic Roadmap SVG Card -->
-  <img src="assets/svg/roadmap-card.svg" alt="2026 Developer Roadmap" width="100%" />
+  <!-- 5 Hexagon Achievement Badges Card -->
+  <img src="assets/svg/achievements-badges.svg" alt="Custom Hexagon Achievement Badges" width="100%" />
+
+  <br/><br/>
+
+  <!-- Custom 7x52 Contribution Heatmap Grid -->
+  <img src="assets/svg/contribution-heatmap.svg" alt="Custom Contribution Matrix Heatmap" width="100%" />
 </div>
 
 <br/>
@@ -395,24 +404,85 @@
 <br/>
 
 <!-- ========================================== -->
-<!-- 09. SPOTIFY & VISITOR STATS -->
+<!-- 09. LIVE INTEGRATIONS & SPOTIFY VINYL -->
 <!-- ========================================== -->
 <div align="center">
+  <h3>🌐 LIVE THIRD-PARTY INTEGRATIONS</h3>
+
+  <br/>
+
   <table>
     <tr>
-      <td width="60%" align="center" valign="middle">
-        <h4>🎧 Coding Soundtrack &amp; Focus Flow</h4>
+      <td width="55%" align="center" valign="middle">
+        <h4>🎧 Spotify Live Track &amp; Animated Vinyl Record</h4>
         <a href="https://spotify.com">
-          <img src="https://spotify-github-readme.vercel.app/api/spotify?user=manndangrechiya&theme=dark" alt="Spotify Live Track Feed" width="95%" />
+          <img src="assets/svg/spotify-vinyl.svg" alt="Spotify Now Playing Animated Vinyl Record" width="100%" />
         </a>
       </td>
-      <td width="40%" align="center" valign="middle">
+      <td width="45%" align="center" valign="middle">
+        <h4>🟢 Live Coding Status (WakaTime)</h4>
+        <img src="assets/svg/coding-status.svg" alt="Live Coding Traffic Light Status Badge" width="90%" />
+        <br/><br/>
         <h4>👁️ Profile Visitors</h4>
-        <br/>
         <img src="https://komarev.com/ghpvc/?username=MannDangrechiya&style=flat-square&color=38BDF8&label=TOTAL+VISITS" alt="Visitor Counter" />
       </td>
     </tr>
   </table>
+</div>
+
+<br/>
+<hr />
+<br/>
+
+<!-- ========================================== -->
+<!-- 10. LATEST WRITINGS & TECH ARTICLES -->
+<!-- ========================================== -->
+<div align="center">
+  <h3>📝 LATEST WRITINGS &amp; ARTICLES</h3>
+  <br/>
+
+<!-- START_SECTION:articles -->
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <a href="https://dev.to/manndangrechiya/mastering-flutter-clean-architecture">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" width="100%" height="120" style="object-fit:cover; border-radius:8px;" alt="Mastering Flutter Clean Architecture: Domain-Driven Modular Apps" />
+      </a>
+      <br/><br/>
+      <h4><a href="https://dev.to/manndangrechiya/mastering-flutter-clean-architecture">Mastering Flutter Clean Architecture: Domain-Driven Modular Apps</a></h4>
+      <p font-size="2" fill="#94A3B8">
+        ⏱️ <code>6 min read</code> • 📅 <code>Aug 2026</code>
+      </p>
+      <p>A comprehensive guide on structuring high-scale production Flutter apps with Riverpod, repository patterns, and testable domain layers.</p>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://dev.to/manndangrechiya/flame-engine-rive-3d-flutter">
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" width="100%" height="120" style="object-fit:cover; border-radius:8px;" alt="Building 60 FPS 2D/3D Games in Flutter using Flame Engine & Rive" />
+      </a>
+      <br/><br/>
+      <h4><a href="https://dev.to/manndangrechiya/flame-engine-rive-3d-flutter">Building 60 FPS 2D/3D Games in Flutter using Flame Engine & Rive</a></h4>
+      <p font-size="2" fill="#94A3B8">
+        ⏱️ <code>8 min read</code> • 📅 <code>Jul 2026</code>
+      </p>
+      <p>Explore real-time game physics, custom GLSL fragment shaders, and 3D character state machines inside Flutter mobile apps.</p>
+    </td>
+    <td width="33%" valign="top">
+      <a href="https://dev.to/manndangrechiya/firebase-realtime-dart-cache">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" width="100%" height="120" style="object-fit:cover; border-radius:8px;" alt="Real-Time Firebase Synchronization & Offline Caching in Dart" />
+      </a>
+      <br/><br/>
+      <h4><a href="https://dev.to/manndangrechiya/firebase-realtime-dart-cache">Real-Time Firebase Synchronization & Offline Caching in Dart</a></h4>
+      <p font-size="2" fill="#94A3B8">
+        ⏱️ <code>5 min read</code> • 📅 <code>Jun 2026</code>
+      </p>
+      <p>How to handle offline persistence, optimistic UI updates, and atomic Cloud Firestore transactions seamlessly.</p>
+    </td>
+  </tr>
+</table>
+
+<!-- END_SECTION:articles -->
+
 </div>
 
 <br/>
