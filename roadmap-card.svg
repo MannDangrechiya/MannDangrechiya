@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="road-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F17" />
+      <stop offset="100%" stop-color="#030509" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  </style>
+
+  <rect width="900" height="220" rx="14" fill="url(#road-bg)" stroke="#1E293B" stroke-width="1.2" />
+
+  <text x="30" y="38" class="sans" font-size="16" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">2026 STRATEGIC ROADMAP &amp; FUTURE FOCUS</text>
+
+  <g transform="translate(30, 60)">
+    <!-- Milestone 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="410" height="60" rx="8" fill="#1E293B" fill-opacity="0.5" stroke="#38BDF8" stroke-width="0.8" />
+      <circle cx="25" cy="30" r="10" fill="#0284C7" />
+      <text x="25" y="34" text-anchor="middle" class="mono" font-size="10" fill="#FFFFFF" font-weight="800">1</text>
+      <text x="50" y="27" class="sans" font-size="13" font-weight="700" fill="#F8FAFC">Flutter Impeller &amp; Custom Shaders</text>
+      <text x="50" y="44" class="sans" font-size="11" fill="#94A3B8">Mastering GLSL fragment shaders &amp; GPU graphics</text>
+    </g>
+
+    <!-- Milestone 2 -->
+    <g transform="translate(430, 0)">
+      <rect width="410" height="60" rx="8" fill="#1E293B" fill-opacity="0.5" stroke="#818CF8" stroke-width="0.8" />
+      <circle cx="25" cy="30" r="10" fill="#4F46E5" />
+      <text x="25" y="34" text-anchor="middle" class="mono" font-size="10" fill="#FFFFFF" font-weight="800">2</text>
+      <text x="50" y="27" class="sans" font-size="13" font-weight="700" fill="#F8FAFC">Rust + Dart FFI Integration</text>
+      <text x="50" y="44" class="sans" font-size="11" fill="#94A3B8">Low-level zero-copy native performance bridge</text>
+    </g>
+
+    <!-- Milestone 3 -->
+    <g transform="translate(0, 75)">
+      <rect width="410" height="60" rx="8" fill="#1E293B" fill-opacity="0.5" stroke="#C084FC" stroke-width="0.8" />
+      <circle cx="25" cy="30" r="10" fill="#9333EA" />
+      <text x="25" y="34" text-anchor="middle" class="mono" font-size="10" fill="#FFFFFF" font-weight="800">3</text>
+      <text x="50" y="27" class="sans" font-size="13" font-weight="700" fill="#F8FAFC">Published Open-Source Dart Packages</text>
+      <text x="50" y="44" class="sans" font-size="11" fill="#94A3B8">Reusable UI components &amp; state management utilities</text>
+    </g>
+
+    <!-- Milestone 4 -->
+    <g transform="translate(430, 75)">
+      <rect width="410" height="60" rx="8" fill="#1E293B" fill-opacity="0.5" stroke="#34D399" stroke-width="0.8" />
+      <circle cx="25" cy="30" r="10" fill="#059669" />
+      <text x="25" y="34" text-anchor="middle" class="mono" font-size="10" fill="#FFFFFF" font-weight="800">4</text>
+      <text x="50" y="27" class="sans" font-size="13" font-weight="700" fill="#F8FAFC">Enterprise Flutter Architecture &amp; Monorepos</text>
+      <text x="50" y="44" class="sans" font-size="11" fill="#94A3B8">Melos monorepos, micro-frontends &amp; CI/CD automation</text>
+    </g>
+  </g>
+</svg>

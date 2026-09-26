@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="time-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F17" />
+      <stop offset="100%" stop-color="#05070E" />
+    </linearGradient>
+    <linearGradient id="timeline-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#818CF8" />
+      <stop offset="100%" stop-color="#C084FC" />
+    </linearGradient>
+    <filter id="glow-dot" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+  </style>
+
+  <rect width="900" height="240" rx="14" fill="url(#time-bg)" stroke="#1E293B" stroke-width="1.2" />
+
+  <!-- Title -->
+  <text x="30" y="38" class="sans" font-size="16" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">CAREER TRAJECTORY &amp; EXPERIENCE TIMELINE</text>
+
+  <!-- Horizontal Line -->
+  <line x1="80" y1="120" x2="820" y2="120" stroke="url(#timeline-line)" stroke-width="3" stroke-linecap="round" />
+
+  <!-- Node 1: 2022 - 2026 -->
+  <g transform="translate(140, 120)">
+    <circle cx="0" cy="0" r="10" fill="#0284C7" stroke="#38BDF8" stroke-width="3" filter="url(#glow-dot)" />
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" />
+    <text x="0" y="-25" text-anchor="middle" class="mono" font-size="13" font-weight="800" fill="#38BDF8">2022 – 2026</text>
+    <text x="0" y="32" text-anchor="middle" class="sans" font-size="12" font-weight="600" fill="#F1F5F9">B.E. Computer Engineering</text>
+    <text x="0" y="50" text-anchor="middle" class="sans" font-size="10.5" fill="#94A3B8">LDRP-ITR • CGPA 7.76 / 10</text>
+  </g>
+
+  <!-- Node 2: Sep 2025 - Feb 2026 -->
+  <g transform="translate(450, 120)">
+    <circle cx="0" cy="0" r="10" fill="#4F46E5" stroke="#818CF8" stroke-width="3" filter="url(#glow-dot)" />
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" />
+    <text x="0" y="-25" text-anchor="middle" class="mono" font-size="13" font-weight="800" fill="#818CF8">SEP 2025 – FEB 2026</text>
+    <text x="0" y="32" text-anchor="middle" class="sans" font-size="12" font-weight="600" fill="#F1F5F9">Flutter Developer Intern</text>
+    <text x="0" y="50" text-anchor="middle" class="sans" font-size="10.5" fill="#94A3B8">TechyPanther • Provider / GetX / Firebase</text>
+  </g>
+
+  <!-- Node 3: Jul 2026 - Present -->
+  <g transform="translate(760, 120)">
+    <circle cx="0" cy="0" r="10" fill="#9333EA" stroke="#C084FC" stroke-width="3" filter="url(#glow-dot)" />
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" />
+    <text x="0" y="-25" text-anchor="middle" class="mono" font-size="13" font-weight="800" fill="#C084FC">JUL 2026 – PRESENT</text>
+    <text x="0" y="32" text-anchor="middle" class="sans" font-size="12" font-weight="600" fill="#F1F5F9">Flutter Developer</text>
+    <text x="0" y="50" text-anchor="middle" class="sans" font-size="10.5" fill="#94A3B8">PrintDeed • Cross-Platform Mobile Apps</text>
+  </g>
+</svg>
