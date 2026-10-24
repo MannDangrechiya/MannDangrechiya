@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19" />
+      <stop offset="100%" stop-color="#05070D" />
+    </linearGradient>
+    <linearGradient id="card-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#C084FC" stop-opacity="0.4" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: 'Fira Code', 'JetBrains Mono', 'Menlo', 'Consolas', monospace; font-size: 13.5px; }
+    .kw { fill: #C084FC; font-weight: 600; }
+    .cls { fill: #38BDF8; font-weight: 600; }
+    .str { fill: #34D399; }
+    .num { fill: #FBBF24; }
+    .cmt { fill: #64748B; font-style: italic; }
+    .prop { fill: #F1F5F9; }
+    .punct { fill: #94A3B8; }
+    .ln { fill: #475569; font-size: 12px; }
+  </style>
+
+  <!-- Container -->
+  <g filter="url(#shadow)">
+    <rect width="850" height="380" rx="14" fill="url(#card-bg)" stroke="url(#card-stroke)" stroke-width="1.2" />
+
+    <!-- Window Header -->
+    <path d="M 0 14 C 0 6, 6 0, 14 0 L 836 0 C 844 0, 850 6, 850 14 L 850 42 L 0 42 Z" fill="#111827" stroke="#1E293B" stroke-width="0.8" />
+    <circle cx="24" cy="21" r="5.5" fill="#EF4444" />
+    <circle cx="42" cy="21" r="5.5" fill="#F59E0B" />
+    <circle cx="60" cy="21" r="5.5" fill="#10B981" />
+    <text x="85" y="25" class="mono" font-size="12" fill="#94A3B8">lib/src/whoami.dart</text>
+    <text x="730" y="25" class="mono" font-size="11" fill="#475569">B.E. Comp Eng | 7.76 CGPA</text>
+    <line x1="0" y1="42" x2="850" y2="42" stroke="#1E293B" stroke-width="1" />
+
+    <!-- Code Line Content -->
+    <g transform="translate(20, 70)">
+      <g class="mono ln">
+        <text x="0" y="0">01</text>
+        <text x="0" y="24">02</text>
+        <text x="0" y="48">03</text>
+        <text x="0" y="72">04</text>
+        <text x="0" y="96">05</text>
+        <text x="0" y="120">06</text>
+        <text x="0" y="144">07</text>
+        <text x="0" y="168">08</text>
+        <text x="0" y="192">09</text>
+        <text x="0" y="216">10</text>
+        <text x="0" y="240">11</text>
+        <text x="0" y="264">12</text>
+        <text x="0" y="288">13</text>
+      </g>
+
+      <g transform="translate(35, 0)" class="mono">
+        <text x="0" y="0">
+          <tspan class="kw">import</tspan> <tspan class="str">'package:flutter/material.dart'</tspan><tspan class="punct">;</tspan>
+        </text>
+
+        <text x="0" y="24">
+          <tspan class="cmt">// Flutter Developer @ PrintDeed | Ex-TechyPanther</tspan>
+        </text>
+
+        <text x="0" y="48">
+          <tspan class="kw">class</tspan> <tspan class="cls">MannDangrechiya</tspan> <tspan class="kw">extends</tspan> <tspan class="cls">FlutterDeveloper</tspan> <tspan class="punct">{</tspan>
+        </text>
+
+        <text x="20" y="72">
+          <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">name</tspan> = <tspan class="str">'Mann Dangrechiya'</tspan><tspan class="punct">;</tspan>
+        </text>
+
+        <text x="20" y="96">
+          <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">company</tspan> = <tspan class="str">'PrintDeed (Gandhinagar)'</tspan><tspan class="punct">;</tspan>
+        </text>
+
+        <text x="20" y="120">
+          <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">location</tspan> = <tspan class="str">'Ahmedabad, Gujarat, India 🇮🇳'</tspan><tspan class="punct">;</tspan>
+        </text>
+
+        <text x="20" y="144">
+          <tspan class="kw">final</tspan> <tspan class="cls">List</tspan><tspan class="punct">&lt;</tspan><tspan class="cls">String</tspan><tspan class="punct">&gt;</tspan> <tspan class="prop">stack</tspan> = <tspan class="punct">[</tspan><tspan class="str">'Flutter'</tspan><tspan class="punct">, </tspan><tspan class="str">'Dart'</tspan><tspan class="punct">, </tspan><tspan class="str">'Firebase'</tspan><tspan class="punct">, </tspan><tspan class="str">'REST APIs'</tspan><tspan class="punct">];</tspan>
+        </text>
+
+        <text x="20" y="168">
+          <tspan class="kw">final</tspan> <tspan class="cls">List</tspan><tspan class="punct">&lt;</tspan><tspan class="cls">String</tspan><tspan class="punct">&gt;</tspan> <tspan class="prop">stateMgmt</tspan> = <tspan class="punct">[</tspan><tspan class="str">'Riverpod'</tspan><tspan class="punct">, </tspan><tspan class="str">'Provider'</tspan><tspan class="punct">, </tspan><tspan class="str">'GetX'</tspan><tspan class="punct">];</tspan>
+        </text>
+
+        <text x="20" y="192">
+          <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">education</tspan> = <tspan class="str">'B.E. Computer Engineering (LDRP-ITR)'</tspan><tspan class="punct">;</tspan>
+        </text>
+
+        <text x="20" y="216">
+          <tspan class="kw">final</tspan> <tspan class="cls">String</tspan> <tspan class="prop">portfolio</tspan> = <tspan class="str">'devportfolio.manndangrechiya.workers.dev'</tspan><tspan class="punct">;</tspan>
+        </text>
+
+        <text x="20" y="240">
+          <tspan class="cmt">@override</tspan>
+        </text>
+
+        <text x="20" y="264">
+          <tspan class="cls">Widget</tspan> <tspan class="prop">build</tspan><tspan class="punct">(</tspan><tspan class="cls">BuildContext</tspan> <tspan class="prop">context</tspan><tspan class="punct">) =&gt; </tspan><tspan class="cls">ProductionReadyApp</tspan><tspan class="punct">();</tspan>
+        </text>
+
+        <text x="0" y="288">
+          <tspan class="punct">}</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
